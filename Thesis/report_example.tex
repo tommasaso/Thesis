@@ -9,9 +9,9 @@
 
 \begin{document}
 
- \include{thesisfront}  
+\include{thesisfront}  
  
-  \section*{Abstract}
+\section*{Abstract}
    
  Do not forget to check each reference while importing in your Bibtex file.
  Especially, IEEExplore export may lead to ill-formatted conference name like \emph{Robotics and Automation, 
@@ -37,6 +37,9 @@
  SWRL & Semantic Web Rule Language\\
  OWL & Ontology Web Language\\
  EMS & Emergency Medical Services \\
+ AR & Activity Recognition \\
+ IOT & Internet of Things \\
+ ML & Machine Learning \\
  \end{tabular}
  
  \newpage
@@ -48,12 +51,12 @@
  \tableofcontents
  
  
- \chapter*{Introduction}
+ \chapter{Introduction}
  \addcontentsline{toc}{chapter}{Introduction}	 % non-numbered chapters do not appear in table of contents by default
- \section*{Background}
- The growth of the population with progress of medical techniques involve an increase in the number of elderly. Indeed in most of the industrialized countries the demographic and social trends lead to greater elderly among the population. The effects of the trends can be critical for emergency medical services, public and private health care and the individuals themselves. 
- The raising of the average age of the population mean an higher number of chronic diseases and therefore also emergency situations. 
- In the district of Kaiserslautern, Germany, a significant study was conducted showing that 44\% of Emergency Medical Services (EMS) are dedicated to elderly above 70 years of age.
+
+  The growth of the population with progress of medical techniques involve an increase in the number of elderly. Indeed in most of the industrialized countries the demographic and social trends lead to greater elderly among the population. The effects of the trends can be critical for emergency medical services, public and private health care and the individuals themselves. 
+ The raising of the average age of the population means an higher number of chronic diseases and therefore also emergency situations. 
+ In the district of Kaiserslautern, Germany, a significant study was conducted showing that 44\% of Emergency Medical Services (EMS) are dedicated to elderly above 70 years of age \cite{kleinberger2007ambient}.
  	\begin{figure}[H]
 		\centering
 		\includegraphics[width=12cm]{Thesis/data/populationProspect.png}
@@ -64,26 +67,54 @@
  
  \parskip  \parskip
  
- The Ambient Intelligence technologies help to cope with trends, providing proactive and conscious assistance and supporting the autonomy of the elderly. Indeed Assisted Living solutions, not only can they reduce the costs of managing and monitoring older people but they can also offer better \textit{quality of life} \cite{kleinberger2007ambient}. 
+ The Ambient Intelligence technologies help to cope with trends, providing proactive and conscious assistance and supporting the autonomy of the elderly. Indeed Assisted Living solutions, they not only can reduce the costs of managing and monitoring older people but they can also offer better \textit{quality of life} \cite{kleinberger2007ambient}.
  
- \parskip \parskip
- 
- To do this, so to guarantee an improved quality of life it is necessary ensure that the so-colled Activities of Daily Living (ADL) are correctly and regularly performed by the assisted \cite{buoncompagni2017towards}.. 
+  To guarantee an improved quality of life it is necessary ensure that the so-colled Activities of Daily Living (ADL) are correctly and regularly performed by the assisted \cite{buoncompagni2017towards}.
  
  As defined \cite{buoncompagni2017towards}, ADL are daily activities related to motion, rest, nutrition, and personal hygiene, which are a qualitative indicator of a person’s wellbeing, determine their quality of life and level of independence. 
  
- An architecture able to monitoring these kind of activities can provide very useful information about human behaviour to Human-Robot interaction o cooperation in smart environments \cite{bruno2014public}.  
+ Indeed in literature the term smart home is used as synonymous of home based that is context-ware, where context awareness has been defined as: ”having information that can be used to characterize the situation of an entity, where an entity can be a person, place, physical or computational object that is considered relevant to the interaction between a user and an application, including the user and applications themselves” \cite{abowd1999towards}. 
+
+ Now, with giant stride forward in the domain of assistive robots and IOT (Internet of Things) field joined with technological advances in the miniaturization and increased battery life of different types of sensors have given the possibility to create increasingly complex and sophisticated architectures of intelligent environments \cite{phdthesis} \cite{nakashima2009handbook}.
  
- In literature it is possible distinguish two different approaches of monitoring: one is based on heterogeneous sensor distributed in an area used to deduce the state of the person inside a context \cite{aggarwal2011human}; the other achieve the information from wearable sensing so sensors located on the person body and able to detect the movements of the person \cite{bao2004activity}. 
+ For an easier and immediate comprehension of the possibilities expressible by this type of technology let's have look to some interesting scenario that could support elderly to retrieve their independence:
+ \begin{itemize}
+     \item \textit{Scenario 1}: The geriatrician with the task of monitoring the health status of elderly could monitor the quality of the patient's sleep through indomitable devices or pressure sensors positioned at the base of the bed, visualizing the pattern of sleep during the night.
+     \item \textit{Scenario 2}: The system could monitor the daily activities such as getting out of bed, washing and having breakfast etc. Then it sends an alarm to the geriatrician if, for example, the patient stops eating.
+     \item \textit{Scenario 3}: The elder after having woken up decides to take a walk, he puts on his coat and as soon as he crosses the threshold the system realizes that it is probable that it rains and that the elder has not taken the umbrella risking thus to fall ill. Then the system alerts him via a notification on the wearable device or directly via a voice interface.
+     \item \textit{Scenario 4}: Let's consider an elderly person who is alone at home  and is heading to the bathroom to wash. The system detects his presence in the bathroom and also receives an unclear signal from the wearable that he wears that could represent a fall by the elderly. To be certain of the elderly safety, the system could verify it  in two ways: it could ask the elderly about his state through a voice interface or it could send a robot 'companion' to check the situation (for example through image analysis - ML).
+ \end{itemize}
+ 
+ Smart systems are an inevitable reality but it is important to don't forget to neglect the value of human-human interaction because we do not want that the elderly, inserted in this context, isolates himself from the others \cite{phdthesis}.
+ 
+
+ \chapter{Background}
+This chapter aims to give an overview of the terminologies and basic technologies implemented in any smart environment. \todo{to write somthing more}
+
+ \section{Sensoring}
+ An architecture able to monitor these kind of activities can provide very useful information about human behaviour to Human-Robot interaction or cooperation in smart environments \cite{bruno2014public}.  
+ 
+ In literature it is possible to distinguish two different approaches of monitoring: one is based on heterogeneous sensor distributed in an area used to deduce the state of the person inside a context \cite{aggarwal2011human}; the other achieves the information from the wearable devices so sensors located on the person body are able to detect its movements  \cite{bao2004activity}. 
  Therefore we can differentiate two different pivotal concepts:
  \begin{itemize}
-    \item to monitor complex sequences of activities reported over time and detected by the interaction with various objects in the monitored area, smart environments are the favourite approach \cite{scalmato2012describing}.
-    \item with the advent of the Inertial Measurement Unit (IMU) and therefore easily monitoring the acceleration and orientation of the limbs , the wearable sensing systems, which also be able to monitor bio signals, are without a doubt the preferred solution to monitor either body gestures or vital signs \cite{bruno2013analysis}.
+    \item to monitor complex sequences of activities reported over time and detected by the interaction with various objects in the monitored area, smart environments are the suggested approach \cite{scalmato2012describing}.
+    \item with the advent of the Inertial Measurement Unit (IMU) and therefore the easy monitoring of the acceleration and orientation of limbs, the wearable sensing system, which is also able to monitor bio signals, is certainly the preferred solution to monitor both body gestures and vital signs \cite{bruno2013analysis}.
 \end{itemize}
  
-Both these approaches are obviously very useful to detect the state of health of the monitored person and one does not exclude the others. 
+Both these approaches are obviously very useful to detect the state of health of the monitored person. They can be used together given that one does not exclude the others. 
 
-\subsection*{ADL}
+
+\section{Context-Modelling}
+To recognize the activities, the information from the sensors must be stored and interpreted basis on the model of the context where they came from.  
+The modeling procedure has as its aim to create an informative and compact representation of activities. 
+We can distinguish two type of the modelling approaches: 
+\begin{enumerate}
+    \item In logic-based solution, monitoring and recognition of activities is codified through well-defined rules, which are based on ranges of admissible values for a set of relevant parameters \cite{phdthesis}.
+    \item \textit{knowledge-driven} is made of observed data, and generally does not use logic as a modelling tool. It's typically used when simpler data are involved (e.g. using distributed sensors)\cite{kareem2018arianna}. 
+\end{enumerate}
+In the next sections will be explained in detail. 
+
+\section{ADL}
 Our everyday activities tell us a lot about who we are and to ensure a certain level of independence \cite{buoncompagni2017towards}. For this reason at first it is very important to define them. 
 \\
 As early as late 1950s, we began to study the psychological, social and biological aspects of aging, analyzing the correlation between human actions and cognitive and motor capabilities \cite{buoncompagni2017towards}. 
@@ -99,7 +130,7 @@ From \cite{Multidisciplinary} we can find the Index of activities of Daily Livin
     \item \textit{feeding}
 \end{enumerate}
 
-But these number of ADLs was then extended adding activities deemed relevant for the well-being of a person. These other nine activities, that take the name of Scale of Instrumental ADL \cite{lawton1970assessment} (IADL), require sufficient capabilities of social skills and planning capabilities using and interacting with everyday objects \cite{buoncompagni2017towards}:
+But these number of ADL was then extended adding activities deemed relevant for the well-being of a person. These other nine activities, that take the name of Scale of Instrumental ADL \cite{lawton1970assessment} (IADL), require sufficient capabilities of social skills and planning capabilities using and interacting with everyday objects \cite{buoncompagni2017towards}:
 \begin{enumerate}[noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt]
     \item \textit{placing a telephone call}
     \item \textit{shopping}
@@ -115,20 +146,17 @@ Nowadays, as explained in \cite{bruno2014public} the scale of IADL and the index
 
 In this essay the term ADL will assume a more general meaning, representing any  considered daily activities. 
 
-\subsection*{Human Activity Recognition}
-There are a lot documentations in literature where we discuss of the automatic recognition of ADL. There are often differences about adopted sensing equipment or in the choice of the type of sensors. But typically all the solution share a common paradigm: "\textit{distributed sensing, centralized reasoning}". The sensor information are distributed as raw data, with minimal or no processing, and made available to the reasoning system responsible for analyzing them to extract high level information, the ADLs.   
+\section{Human Activity Recognition}
+There are a lot documentations in literature where we discuss of the automatic recognition of ADL. There are often differences about adopted sensing equipment or in the choice of the type of sensors. But typically all the solution share a common paradigm: "\textit{distributed sensing, centralized reasoning}". The sensor information are distributed as raw data, with minimal or no processing, and made available to the reasoning system responsible for analyzing them to extract high level information, the ADL \cite{buoncompagni2017towards}.   
 
-Tanti articoli in letteruatura parlano del riconoscimento di ADL,
-Differenze nei dispositivi di rilevamaento, nella scelta dei sensori e nella tecnica per la laro analisi.  
-Quasi tutte le soluzioni presentano però un paradigma, sensing distribuito e ragionamento centralizzato. Questo significa che i dati sensoriali sono dati grezzi, con una minima o nessuna elaborazione, sono resi disponiibili al "ragionatore" responsabile dell'anilisi di questi per estrarre informazioni di alto livello ovverto le ADL. 
-Una possibile soluzione è usare un gran numero di sensori binari per la loro facile interpretazione (es: interruttore della luce ON/OFF) ed il loro basso costo. Le inforamzioni sensoriali devono però essere organizzati e analizzati in strutture di più alto livello. Per fare ciò in letteratura, la soluzione più utilizzata e intelligente è farlo con le ontologie. 
+A possible solution is to use binary sensors for their easy interpretation (eg: ON/OFF light switch) and their low cost. However, sensory information must be organized and analyzed in higher-level structures. To do this in literature, the most common and smart solution is to do it with \textit{ontologies} \cite{buoncompagni2017towards}.
 
+\section{Reliability recognition}
+The reliability of the recognition is obviously fundamental for any system. Indeed we need to discriminate when a solution is consistent, when all the information is coherent with the specific activities detected, or not, when there are some missing information or contradictory.
+As explained in \cite{sentz2002combination} to detailed information about the confidence of the recognition, the reasoning module extends a hierarchy of coarse ontologies implementing the Dempster - Shafer (DS). 
 
+Differently from a broad solution like DS, there are several other system developed specifically to maximize the recognition accuracy of a specific ADL. This kind of solutions are base on one or just a few homogeneous sensors which a imitated number of activities.  
 
-Un grande corpus di letteratura tratta del riconoscimento automatico di ADL. Oltre alle differenze nelle apparecchiature di rilevamento adottate e, di conseguenza, nel middleware per la gestione dei dati sensoriali e nelle tecniche per la loro analisi, la maggior parte delle soluzioni seguono lo stesso principio di funzionamento del "sensing distribuito, ragionamento centralizzato". In questo paradigma, i dati sensoriali grezzi (eventualmente) eterogenei vengono raccolti e, con nessuna o minima pre-elaborazione, resi disponibili al sistema di ragionamento responsabile dell'analisi per estrarre informazioni di alto livello relative all'esecuzione di ADL. Ad esempio, la più ricca tra queste soluzioni utilizza un numero elevato di sensori binari economici (come i sensori di presenza per rilevare se c'è una persona in un'area, sensori aperti / chiusi per porte e finestre, sensori on / off per interruttori della luce, ecc.) e si basano su ontologie per l'estrazione di informazioni ad alto livello relative all'ADL da dati sensoriali [6] [26], senza elaborazione intermedia.
-
- 
- 
  \chapter{State of the art}
  
 %  \section{First topic}
