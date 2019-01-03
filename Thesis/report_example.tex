@@ -105,14 +105,37 @@ Both these approaches are obviously very useful to detect the state of health of
 
 
 \section{Context-Modelling}
+ There are several popular context modelling techniques, used in context-aware computing. The context models can be dynamic or static and typically, two different steps, can be distinguished, in representing context according to a model: 
+ \begin{itemize}
+     \item Context modelling process: when a new context need to be defined in terms of characteristics, attributes, relationships with previously specified context, quality-of context attributes and the queries for synchronous context requests.
+     \item Organize context according to the model: the result of the context modelling must be validated, then the new context information needs to be merged and added to to the existing context information repository and finally make available the new context information when required.
+ \end{itemize}
+ However the parameters and factors considered for the modelling context are very subjective. Indeed there is no standard to specify what type information needs to be considered in the context modelling.
+ In \cite{chen2000survey} and \cite{strang2004context} are discussed the most popular context modelling techniques each of which has its own strengths and weaknesses \cite{perera2014context}, synthetically shown In the table below.
+ 
+ 	\begin{figure}[H]
+		\centering
+		\includegraphics[width=17.5cm]{Thesis/data/ContextModelComparison.png}
+		\caption{Comparison of Context Modelling and representation Techniques \cite{perera2014context}}
+		\label{fig:populationProspect}
+	\end{figure}
+ As will be better discussed in the section \ref{ontology} the ontology, according to many surveys, is the preferred mechanism of managing and and modelling context, for all its advantages at the despite its weaknesses \cite{perera2014context}.
+ 
+ 
+ \subsection{Reasoning}
+ The context reasoning, also called inferencing, can be considered as a method to deduct new knowledge based on the available context.  
+ it can also be seen as a process to provide hight-level context deduction from a set of contexts \cite{perera2014context}.
+ 
 To recognize the activities, the information from the sensors must be stored and interpreted basis on the model of the context where they came from.  
 The modeling procedure has as its aim to create an informative and compact representation of activities. 
 We can distinguish two type of the modelling approaches: 
 \begin{enumerate}
-    \item In logic-based solution, monitoring and recognition of activities is codified through well-defined rules, which are based on ranges of admissible values for a set of relevant parameters \cite{phdthesis}.
-    \item \textit{knowledge-driven} is made of observed data, and generally does not use logic as a modelling tool. It's typically used when simpler data are involved (e.g. using distributed sensors)\cite{kareem2018arianna}. 
+    \item In logic-based solution, monitoring and recognition of activities is codified through well-defined rules, which are based on ranges of admissible values for a set of relevant parameters. It is often used of for its fast and simple classification procedure (decision trees) \cite{phdthesis}. 
+    \item Probability-based solutions assume that the recognition is typically performed by comparing runtime sensory data with the stored models using probabilistic distance measures \cite{phdthesis}. Commonly adopted techniques include Neural Networks \cite{krassnig2010user}, Hidden Markov Mod- els \cite{wiles2012meaning}, \cite{choudhury2008mobile} and Gaussian Mixture Models \cite{bruno2012human}.
 \end{enumerate}
 In the next sections will be explained in detail. 
+
+\section{Ontology} \label{ontology}
 
 \section{ADL}
 Our everyday activities tell us a lot about who we are and to ensure a certain level of independence \cite{buoncompagni2017towards}. For this reason at first it is very important to define them. 
