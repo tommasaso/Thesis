@@ -54,6 +54,7 @@
  \chapter{Introduction}
  \addcontentsline{toc}{chapter}{Introduction}	 % non-numbered chapters do not appear in table of contents by default
 
+\section{Motivation}
   The growth of the population with progress of medical techniques involve an increase in the number of elderly. Indeed in most of the industrialized countries the demographic and social trends lead to greater elderly among the population. The effects of the trends can be critical for emergency medical services, public and private health care and the individuals themselves. 
  The raising of the average age of the population means an higher number of chronic diseases and therefore also emergency situations. 
  In the district of Kaiserslautern, Germany, a significant study was conducted showing that 44\% of Emergency Medical Services (EMS) are dedicated to elderly above 70 years of age \cite{kleinberger2007ambient}.
@@ -69,7 +70,9 @@
  
  The Ambient Intelligence technologies help to cope with trends, providing proactive and conscious assistance and supporting the autonomy of the elderly. Indeed Assisted Living solutions, they not only can reduce the costs of managing and monitoring older people but they can also offer better \textit{quality of life} \cite{kleinberger2007ambient}.
  
-  To guarantee an improved quality of life it is necessary ensure that the so-colled Activities of Daily Living (ADL) are correctly and regularly performed by the assisted \cite{buoncompagni2017towards}.
+ 
+ \section{Context of the Study}
+  To guarantee an improved quality of life it is necessary ensure that the Activities of Daily Living (ADL) are correctly and regularly performed by the assisted \cite{buoncompagni2017towards}.
  
  As defined \cite{buoncompagni2017towards}, ADL are daily activities related to motion, rest, nutrition, and personal hygiene, which are a qualitative indicator of a person’s wellbeing, determine their quality of life and level of independence. 
  
@@ -87,9 +90,20 @@
  
  Smart systems are an inevitable reality but it is important to don't forget to neglect the value of human-human interaction because we do not want that the elderly, inserted in this context, isolates himself from the others \cite{phdthesis}.
  
-
- \chapter{Background}
-This chapter aims to give an overview of the terminologies and basic technologies implemented in any smart environment. \todo{to write somthing more}
+ \section{Objectives}
+ Le difficoltà e le sfide nell’ambito dell’ambiente intelligente sono molteplici. Molte delle quali legate all'importanza dell'accettazione generale del sistema da parte degli anziani permettendogli di imparare ad abituarsi all'assistenza fornita. Per questo motivo il sistema deve soddisfare le seguenti requisiti relativi all'interfaccia con l'utente:
+ \begin{itemize}
+     \item Adattabilità: il sistema deve essere capace di adattarsi in fase di dimostrazione. Al fine di garantire un servizio migliore possibile il sistema si adattano in base alla situazione in cui si trovano, riducendo per esempio la complessita dell'interfaccia in caso di emergenze per ridurre il carico cognitivo. Per fare ciò il sistema deve poter monitorare in ogni istante l'ambiente che lo circonda, ragionare su ciò che percepisce e quindi apportare i dovuti adattamenti. 
+     \item  Natural, anticipatory human-computer interaction: il sistema deve fornire diversi livelli di interfacce per diversi tipi di utenti: in particolare per il personale medico e di assistenza, per gli operatori di manutazione ma sopratutto per le persone assistite la cui interfaccia deve essere disegnata appositamente in base alle limitazinioni dell'assistito. Indeed the anticipatory interfaces that proactively contact persons in certain situations are considered mandatory.
+     \item Eterogeneità: il sistema deve essere in grado in inegrare diversi sottosistemi forniti da diversi produttore, fornendo però un'interfaccia unica ed omogenea all'utente.
+ \end{itemize}
+ Allo stesso tempo bisogna però considerare i vincoli sociali medici, tecnologici e le  conseguenti problemaitche. 
+ Come la difficoltà per una anziano ad adattarsi e a comprendere una nuova tecnologia, o alle difficoltà di un sistema ad assere di essere operativo dal primo istante etc.
+ 
+ Data la complessità delle problematiche e dell'architettura nell'ambito dell'ambient intellgingence, lo scopo di questo lavoro di tesi e inserirsi in una già presistente architetturna, studiarne le dinamiche e le caratteristiche imparandone i prunti di forza e le debolezze. In questo modo sarà possibile concentrarsi un o 
+ 
+ \chapter{Bacbbiettivi kgroune d}
+Tben definiti his chapter aims to give an overview of the terminologies and basic technologies implemented in any smart environment. \todo{to write somthing more}
 
  \section{Sensoring}
  An architecture able to monitor these kind of activities can provide very useful information about human behaviour to Human-Robot interaction or cooperation in smart environments \cite{bruno2014public}.  
@@ -125,26 +139,57 @@ Both these approaches are obviously very useful to detect the state of health of
  \subsection{Reasoning}
  The context reasoning, also called inferencing, can be considered as a method to deduct new knowledge based on the available context.  
  it can also be seen as a process to provide hight-level context deduction from a set of contexts \cite{perera2014context}.
- 
-To recognize the activities, the information from the sensors must be stored and interpreted basis on the model of the context where they came from.  
-The modeling procedure has as its aim to create an informative and compact representation of activities. 
-We can distinguish two type of the modelling approaches: 
-\begin{enumerate}
-    \item In logic-based solution, monitoring and recognition of activities is codified through well-defined rules, which are based on ranges of admissible values for a set of relevant parameters. It is often used of for its fast and simple classification procedure (decision trees) \cite{phdthesis}. 
-    \item Probability-based solutions assume that the recognition is typically performed by comparing runtime sensory data with the stored models using probabilistic distance measures \cite{phdthesis}. Commonly adopted techniques include Neural Networks \cite{krassnig2010user}, Hidden Markov Mod- els \cite{wiles2012meaning}, \cite{choudhury2008mobile} and Gaussian Mixture Models \cite{bruno2012human}.
-\end{enumerate}
-In the next sections will be explained in detail. 
+ There are a lot of context reasoning decision models. Most of these models are not specific to context-reasoning but commonly employed in different fields such as machine learning or artificial intelligence.
+ In \cite{perera2014context} are discussed the main solutions to context-reasoning, here briefly explained: 
+ \begin{itemize}
+     \item Supervised Learning: in this kind of technique first we collect a training set examples. Then we label them according to the results we expect. Then we generate the expected results using the training data.
+     They are commonly used where the feature set is easily identifiable.
+     
+     \textit{Artificial neural network, Bayesian Networks, Case-based reasoning, Decision tree learning, Support vector machines}
+     \item Unsupervised Learning: they are used for situations where possible out comes are not known. This type of solution has the great advantage of not needing a training date.
+     
+     \textit{Clustering, k-Nearest Neighbour}
+     \item Rule: applicable for situations where raw data elements need to be converted in to high level context information. Suitable to be used to define events. Need for few computational resources and storage. Simple to define and easy to extend.
+     \item Fuzzy Logic: applicable for situation where it is necessary convert low-level context in to more high-level context information. It allows approximate reasoning instead and it is similar to probabilistic confidence values represent degrees membership rather than probability.
+     \item Ontology based: It is mainly supported by two common representations of semantic web languages: RDF and OWL. Indeed it is based on description logic, which is a family of logic based knowledge representations of formalisms. It is used in case where knowledge is critical. It allows complex reasoning and complex representation basis on the ontology structure.
+    
+     \textit{First-Order Predicate Logic}
+     
+     \item Probabilistic logic: it allows decisions to made based on probabilities attached to the facts related to the problem. It is commonly used where probabilities are known and combing evidence from different sources are essential. Indeed it can handle unseen situations and of uncertainty, combining the evidence.  
+     
+     \textit{Dempster-Shafer, hidden Markov Models, naive Bayes}
+ \end{itemize}
+
 
 \section{Ontology} \label{ontology}
 
+In \cite{studer1998knowledge} is defined the concept of ontology as follow: 
+\begin{center}
+\textit{"An ontology is a formal, explicit specification of a shared conceptualisation. A conceptualisation refers to an abstract model of some phenomenon in the world by having identified the relevant concepts of that phenomenon. Explicit means that the type of concepts used, and the constraints on their use are explicitly defined. For example, in medical domains, the concepts are diseases and symptoms, the relations between them are causal and a constraint is that a disease cannot cause itself. Formal refers to the fact that the ontology should be machine readable, which excludes natural language. Shared reflects the notion that an ontology captures consensual knowledge, that is, it is not private to some individual, but accepted by a group.”}
+\end{center}
+
+
+In the ontology based Modelling the context is organized into ontologies with different semantic technologies. Indeed there are several popular standards (RDF, RDFS, OWL) and reasonoing capabilities usable depending on the requirement \cite{perera2014context}. 
+In literature is clear that the current recommendation, for semantic web ontology languages to use, is OWL 2 which is an extended version of OWL \cite{perera2014context} because adds more vocabulary for describing properties and classes. Indeed it can build complex concepts starting with simpler concepts.
+Furthermore, to get the real power of semantic technologies we need to define a  reasoning engines. 
+SWRL, fully integrated into ontological reasoning, is one of the available solutions to add rules in OWL. In contrast ontologies can becomes exceedingly complex causing the reasoning process to be resource intensive and slow when the amount of data becomes larger and structure becomes complex. 
+
+In conclusion there are several reasons to develop and use ontologies in contrast to other modelling techniques. The most common reasons are:
+\begin{itemize}
+    \item share a common understanding of the structure of information among people or software agents.
+    \item analyse domain knowledge
+    \item separate domain knowledge from operational knowledge
+    \item high-level knowledge inferring
+    \item make domain assumptions explicit
+\end{itemize}
+
+
 \section{ADL}
-Our everyday activities tell us a lot about who we are and to ensure a certain level of independence \cite{buoncompagni2017towards}. For this reason at first it is very important to define them. 
-\\
-As early as late 1950s, we began to study the psychological, social and biological aspects of aging, analyzing the correlation between human actions and cognitive and motor capabilities \cite{buoncompagni2017towards}. 
-\\
+Our everyday activities tell us a lot about who we are and to ensure a certain level of independence \cite{buoncompagni2017towards}. For this reason at first it is very important to define them. As early as late 1950s, we began to study the psychological, social and biological aspects of aging, analyzing the correlation between human actions and cognitive and motor capabilities \cite{buoncompagni2017towards}. 
 
 From \cite{Multidisciplinary} we can find the Index of activities of Daily Living where show a classification of the functional status of elderly people on the basis of their capability in the execution of 6 different activities in other words called ADLs \cite{buoncompagni2017towards}:
-\begin{enumerate}[noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt]
+%\begin{enumerate}[noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt]
+\begin{enumerate}
     \item \textit{bathing}
     \item \textit{dressing}
     \item \textit{toileting}
@@ -154,7 +199,8 @@ From \cite{Multidisciplinary} we can find the Index of activities of Daily Livin
 \end{enumerate}
 
 But these number of ADL was then extended adding activities deemed relevant for the well-being of a person. These other nine activities, that take the name of Scale of Instrumental ADL \cite{lawton1970assessment} (IADL), require sufficient capabilities of social skills and planning capabilities using and interacting with everyday objects \cite{buoncompagni2017towards}:
-\begin{enumerate}[noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt]
+%\begin{enumerate}[noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt]
+\begin{enumerate}
     \item \textit{placing a telephone call}
     \item \textit{shopping}
     \item \textit{preparing food}
@@ -172,7 +218,7 @@ In this essay the term ADL will assume a more general meaning, representing any 
 \section{Human Activity Recognition}
 There are a lot documentations in literature where we discuss of the automatic recognition of ADL. There are often differences about adopted sensing equipment or in the choice of the type of sensors. But typically all the solution share a common paradigm: "\textit{distributed sensing, centralized reasoning}". The sensor information are distributed as raw data, with minimal or no processing, and made available to the reasoning system responsible for analyzing them to extract high level information, the ADL \cite{buoncompagni2017towards}.   
 
-A possible solution is to use binary sensors for their easy interpretation (eg: ON/OFF light switch) and their low cost. However, sensory information must be organized and analyzed in higher-level structures. To do this in literature, the most common and smart solution is to do it with \textit{ontologies} \cite{buoncompagni2017towards}.
+A possible solution is to use binary sensors for their easy interpretation (eg: ON/OFF light switch) and their low cost. However, sensory information must be organized and analyzed in higher-level structures. To do this in literature, the most common and smart solution is to do it with \textit{ontologies}  already discussed in section \ref{ontology} \cite{buoncompagni2017towards}.
 
 \section{Reliability recognition}
 The reliability of the recognition is obviously fundamental for any system. Indeed we need to discriminate when a solution is consistent, when all the information is coherent with the specific activities detected, or not, when there are some missing information or contradictory.
