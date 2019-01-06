@@ -17,6 +17,18 @@
 \usepackage[explicit]{titlesec}
 \usepackage{etoolbox}
 
+%Aggiunti da me
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage[justification=centering]{caption}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{subfiles}
+
+
 \makeatletter
 \patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
 \patchcmd{\ttlh@hang}{\noindent}{}{}{}
