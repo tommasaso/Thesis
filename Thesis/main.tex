@@ -56,11 +56,11 @@
  
  
  \chapter{Introduction}
- \addcontentsline{toc}{chapter}{Introduction}	 % non-numbered chapters do not appear in table of contents by default
+ %\addcontentsline{toc}{chapter}{Introduction}	 % non-numbered chapters do not appear in table of contents by default
 
 \section{Motivation}
   The demographic growth along with progress of medical technologies results in an increase of elderly population. Indeed in most of the industrialized countries the demographic and social trends have led to greater elderly burden among the population, and that situation critically increases health care demand. Therefore, emergency medical services, public and private health care and patients are subject to more and more stress. 
-  In particular, the raising of the average age of the population means higher incidence of chronic diseases that require frequent health assistance can result in disability and/or lost of independence and deaply affect health economy for the increasing cost of care. Moreover, if there is a suboptimal management of these diseases there is also in increase use of Emergency Medical Service (EMS), often avoiable.
+  In particular, the raising of the average age of the population means higher incidence of chronic diseases that require frequent health assistance can result in disability and/or lost of independence and deeply affect health economy for the increasing cost of care. Moreover, if there is a suboptimal management of these diseases there is also an increase use of Emergency Medical Service (EMS), often avoidable.
  
  In the district of Kaiserslautern, Germany, a significant study was conducted showing that 44\% of Emergency Medical Services (EMS) are dedicated to elderly above 70 years of age \cite{kleinberger2007ambient}.
  	\begin{figure}[H]
@@ -75,39 +75,38 @@
  
  The Ambient Intelligence technologies help to cope with trends, providing proactive and conscious assistance and supporting the autonomy of the elderly, indeed Assisted Living solutions not only can reduce the costs of managing and monitoring older people but can also offer better \textit{quality of life} \cite{kleinberger2007ambient}.
  
- 
  \section{Context of the Study}
-  To guarantee an improved quality of life it is necessary ensure that the Activities of Daily Living (ADL) are correctly and regularly performed by the assisted \cite{buoncompagni2017towards}.
+  To guarantee an improved quality of life it is necessary to ensure that the Activities of Daily Living (ADL) are correctly and regularly performed by the assisted \cite{buoncompagni2017towards}.
  
  ADL are defined as daily activities related to motion, rest, nutrition, and personal hygiene, which are a qualitative indicator of person’s wellbeing, determining their quality of life and level of independence \cite{buoncompagni2017towards}. 
  
- At this pourpose, in literature the term smart home is used as synonymous of a home based that is context-aware, context awareness has been defined as: ”having information that can be used to characterize the situation of an entity, where an entity can be a person, place, physical or computational object that is considered relevant to the interaction between a user and an application, including the user and applications themselves” \cite{abowd1999towards}. 
+ At this purpose, in literature the term smart home is used as synonymous of a home that is context-aware. Context awareness has been defined as: ``having information that can be used to characterize the situation of an entity, where an entity can be a person, place, physical or computational object that is considered relevant to the interaction between a user and an application, including the user and applications themselves" \cite{abowd1999towards}.  
 
  Today, the idea of smart home is deeply changed, especially due to giant stride of the technologies that support it, giving the possibility to create increasingly complex and sophisticated architectures of intelligent environments. At this regard, in the domain of assistive robots and IOT (Internet of Things) field has taken a leading role, also for technological advances in the miniaturization and increased battery life of different types of sensors \cite{phdthesis} \cite{nakashima2009handbook}.
  
  For an easier and immediate comprehension of the possibilities practicable by this type of technology let's have look to some interesting scenario that could support elderly to retrieve their independence:
  \begin{itemize}
-     \item \textit{Scenario 1}: The geriatrician with the task of monitoring the health status of elderly could monitor the quality of the patient's sleep through indomitable devices or pressure sensors positioned at the base of the bed, visualizing the pattern of sleep during the night.
-     \item \textit{Scenario 2}: The system could monitor the daily activities such as getting out of bed, washing and having breakfast etc. and if the patient, for example, stop eating the system advises the geriatrician.
-     \item \textit{Scenario 3}: The elder after having woken up decides to take a walk, he puts on his coat and as soon as he crosses the threshold the system realizes that it is probable that it rains and that the elder has not taken the umbrella risking thus to fall ill. Then the system alerts him via a notification on the wearable device or directly via a voice interface.
-     \item \textit{Scenario 4}: The elderly person who is alone at home  and is heading to the bathroom to wash. The system detects his presence in the bathroom and also receives an unclear signal from the wearable that he wears that could represent a fall by the elderly. To be certain of the elderly safety, the system could verify it  in two ways: it could ask the elderly about his state through a voice interface or it could send a robot 'companion' to check the situation (for example through image analysis - ML).
+     \item \textit{Scenario 1}: The geriatrician with the task of monitoring the health status of elderly could monitor the quality of the patient's sleep through wearable devices or pressure sensors positioned at the base of the bed, visualizing the pattern of sleep during the night;
+     \item \textit{Scenario 2}: The system could monitor the daily activities such as getting out of bed, washing and having breakfast etc. and if the patient, for example, stop eating the system warns the geriatrician;
+     \item \textit{Scenario 3}: The elder after having woken up decides to take a walk, he puts on his coat and as soon as he crosses the threshold the system realizes that it is probable that it rains and that the elder has not taken the umbrella risking thus to fall ill. Then the system alerts him via a notification on the wearable device or directly via a voice interface;
+     \item \textit{Scenario 4}: The elderly person who is alone at home  and is heading to the bathroom to wash. The system detects his presence in the bathroom and also receives an unclear signal from the wearable that he wears that could represent a fall by the elderly. To be certain of the elderly safety, the system could verify it  in two ways: it could ask the elderly about his state through a voice interface or it could send a robot 'companion' to check the situation (for example through image analysis - ML);
  \end{itemize}
  
- Smart systems are an very usefull reality but it is important to don't forget to neglect the value of human-human interaction because we do not want that the elderly, that are already at risk of isolation, inserted in this context, isolates himself from the others more than before after being insert in this contest \cite{phdthesis}.
+ Smart systems are a very useful reality but it is important to don't forget to neglect the value of human-human interaction because we do not want that the elderly, that are already at risk of isolation, inserted in this context, isolates himself from the others more than before after being insert in this contest \cite{phdthesis}.
  
  \section{Objectives}
  There are many difficulties and challenges in the smart environment, many of them linked to the importance of the general acceptance of the system by the elderly, allowing them to learn how to get used to the assistance provided. For this reason, the system must meet the following user interface requirements:
  \begin{itemize}
-     \item Adaptability:  the systems need to adapt themselves to the context at runtime.
-     In order to guarantee the best possible service, the system adapts themselves according to the situation in which they are located, for example reducing the complexity of the interface in case of emergencies to reduce the cognitive load.
+     \item Adaptability:  the systems need to adapt themselves to the context at runtime;
+     In order to guarantee the best possible service, the system adapts itself according to the situation, for example reducing the complexity of the interface in case of emergencies to reduce the cognitive load;
      To do this, the system must be able to monitor the environment around it at all times, to reason on what it perceives and then make the necessary adjustments.
-     \item  Natural, anticipatory human-computer interaction: the system must provide different levels of interfaces for different types of users; in particular for the medical and assistance staff, for the operators of the maneuvering but especially for the assisted persons whose interface must be specially designed according to the their limitations. 
+     \item  Natural, anticipatory human-computer interaction: the system must provide different levels of interfaces for different types of users; in particular for the medical and assistance staff, for the operators of the maneuvering but especially for the assisted persons whose interface must be specially designed according to the their limitations; 
      Indeed the anticipatory interfaces that proactively contact persons in certain situations are considered mandatory.
-     \item Heterogeneity: the system must be able to integrate different subsystems supplied by different manufacturers, providing a unique and homogeneous user interface.
+     \item Heterogeneity: the system must be able to integrate different subsystems supplied by different manufacturers, providing a unique and homogeneous user interface;
  \end{itemize}
  At the same time, however, we need to consider the medical, technological, social constraints and their consequent problems, for example the difficulties for an elderly person to adapt and understand a new technology, or the difficulties of a system to be operative from the beginning.
  
- Given the complexity of the architecture and of the issues in ambient intelligence, the aim of this thesis work is, firstly, studing and using an already pre-existing architecture, examinig its dinamics, characteristics and the underling strengts and weakness. Secondly, this study’s aim is to improve the architecture ability to acquire informations also in an equivocal and ambiguous context.
+ Given the complexity and the issues of an ambient intelligence architecture, the aim of this thesis work is, firstly, to examine a pre-existing architecture by studying its dynamics and by pointing out the underlying strengths and weaknesses. Secondly, this study’s aim is to improve the architecture ability to acquire informations also in an equivocal and ambiguous context.
  
  The architecture chosen is called Arianna+ and was developed by Teseo Srl in collaboration with the University of Genova. Arianna+ is a smart home system capable of understanding and making sense of the activities carried out by assisted people, predicting their future behaviours and suggesting personalised healthy habits.
  
@@ -115,65 +114,66 @@
  \begin{itemize}
      \item Allow Arianna+ to intentionally acquire information when a given context or situation is equivocal, with 2 different approaches:
      \begin{itemize}
-         \item integrating of a companion robot with the aim of using sensory information collected by robot-centered sensors, building a reciprocal communication whereby the   all the data from the robot are provided to Arianna’s AI system and the AI can control the robot;
-         \item integrating a Google Speech API based dialogue management system developed by the company Dot Vocal srl, where each dialogue is modulated by Arianna’s AI system; 
+         \item By integrating a companion robot with the aim of exploiting its sensors to collect relevant data and by extablishing a two-way communication with Arianna’s AI system, which is in charge of processing them and sending back to the robot specific commands;
+         \item By integrating a Google Speech API based dialogue management system developed by the company Dot Vocal Srl, where each dialogue is modulated by Arianna’s AI system; 
      \end{itemize}
  \end{itemize}
 
  The goal is therefore to fit these characteristics in a smart home able to acquire sensory data and save them neatly relying on the context. As result of this approach, a high-level artificial intelligence is able to react also to unclear and uncertain situation, such as scenario 4, through an accurate activities’ detection from the environment and flexible and effective management of saved informations.
  
- In this way, the outcome will be an improvement of the system not only functionally but also simplifying its interface with the user.
- Indeed, with the integration of a voice interface and a robot companion the user will be encouraged to no longer see the house as a taciturn and hidden entity but as a like-pet to interact with or a person to talk to in case of need and beyond.
+ In this way, the outcome will be an improvement of the system not only functionally but also from the point of view of its usability.
+ Indeed, with the integration of a voice interface and a companion robot the user will be encouraged to no longer see the house as a taciturn and hidden entity but as a pet-like to interact with or a person to talk to in case of need and beyond.
  
 \section{Overview of the Thesis}
 The remainder of the thesis is organized as follows. 
 
-\quad \textit{Chapter 2} presents an overview of the main concepts and techniques adopted in the ambient intelligence field, from the choice of sensors to how and when use them, not forgetting ADL and Ontology definitions that are crucial to understand their role in the next chapters
+\quad \textit{Chapter 2} presents an overview of the main concepts and techniques adopted in the ambient intelligence field, from the choice of sensors to how and when use them, not forgetting ADL and Ontology definitions that are crucial to understand their role in the following chapters
 
 \quad \textit{Chapter 3} presents the state of the art regarding the topics that are useful to reach our goals:
 \begin{itemize}
-    \item Section \ref{Arianna}: presents software architecture of Arianna+ and describes the operating mechanisms to manage data from sensors and to recognize elderly activities.
-    \item Section \ref{speech}: presents the state of the art for based dialogue management system in smart environment, in particular the possible approaches and solutions that can be adopted in our case
-    \item Section \ref{companionRobot}: presents the state of the art for usage of companion robots in smart environment discussing the advantages and possible choices.
+    \item Section \ref{Arianna}: presents software architecture of Arianna+ and describes the operating mechanisms to manage data from sensors and to recognize elderly activities;
+    \item Section \ref{speech}: presents the state of the art for based dialogue management system in smart environment, in particular the possible approaches and solutions that can be adopted in our case;
+    \item Section \ref{companionRobot}: presents the state of the art for usage of companion robots in smart environment discussing the advantages and possible choices;
 \end{itemize}
 
  \chapter{Background}
 The objective of this chapter is to discuss briefly the different aspects that concern smart environment systems:
 \begin{itemize}
-    \item The types of sensors that an intelligent box should be equipped with
-    \item Possible context models to represent a given context based on sensory information
-    \item What are the ADL and how to recognize them
-    \item How to guarantee the reliability of the recognition 
+    \item The types of sensors that an intelligent box should be equipped with;
+    \item Possible context models to represent a given context based on sensory information;
+    \item What are the ADL and how to recognize them;
+    \item How to guarantee the reliability of the recognition;
 \end{itemize}
 
  \section{Sensoring}
  An architecture able to monitor these kind of activities can provide very useful information about human behaviour to Human-Robot interaction or cooperation in smart environments \cite{bruno2014public}.  
  
- In literature it is possible to distinguish two different approaches of monitoring: one is based on heterogeneous sensor distributed in an area used to deduce the state of the person inside a context \cite{aggarwal2011human}; the other achieves the information from the wearable devices which are sensors located on the person body that are able to detect its movements and vital signs \cite{bao2004activity}. 
- Therefore we can differentiate two different pivotal concepts:
+%  In literature it is possible to distinguish two different approaches of monitoring: (A) one is based on heterogeneous sensor distributed in an area used to deduce the state of the person inside a context \cite{aggarwal2011human}; (B) the other achieves the information from the wearable devices which are sensors located on the person body that are able to detect its movements and vital signs \cite{bao2004activity}. 
+%  Therefore we can differentiate two different pivotal concepts:
+% \begin{enumerate}[label=\alph*)]
+%     \item to monitor complex sequences of activities reported over time and detected by the interaction with various objects in the monitored area, smart environments are the suggested approach \cite{scalmato2012describing}.
+%     \item with the advent of the Inertial Measurement Unit (IMU) and consequent improvement of measurability of the acceleration and orientation of limbs, the wearable sensing system (fig:\ref{fig:Wearables}), which is also able to monitor bio signals, is certainly the preferred solution to monitor both body gestures and vital signs \cite{bruno2013analysis}.
+
+ In literature it is possible to distinguish two different approaches of monitoring: 
  \begin{itemize}
-    \item to monitor complex sequences of activities reported over time and detected by the interaction with various objects in the monitored area, smart environments are the suggested approach \cite{scalmato2012describing}.
-    \item with the advent of the Inertial Measurement Unit (IMU) and consequent improvement of measurability of the acceleration and orientation of limbs, the wearable sensing system (fig:\ref{fig:Wearables}), which is also able to monitor bio signals, is certainly the preferred solution to monitor both body gestures and vital signs \cite{bruno2013analysis}.
-    
+    \item heterogeneous sensor distributed are used to monitor complex sequences of activities reported over time and detected by the interaction with various objects in the monitored area \cite{scalmato2012describing}. Therefore they are used to deduce the state of the person inside a context \cite{aggarwal2011human};
+    \item wearable devices achieve the information from sensors located on the person body. In fact with the advent of the Inertial Measurement Unit (IMU) and consequent improvement of measurability of the acceleration and orientation of limbs, the wearable sensing system (fig: \ref{fig:Wearables}), which is also able to monitor bio signals, is certainly the preferred solution to monitor both body gestures and vital signs \cite{bruno2013analysis};
+ 
     \begin{figure}
 		\centering
 		\includegraphics[width=10.5cm]{Thesis/data/sensoring.png}
 		\caption{Health Wearables solution \cite{Wearables2016rise}}
 		\label{fig:Wearables}
 	\end{figure}
-    
+	
 \end{itemize}
- 
- 
- 
-Both these approaches are obviously very useful to detect the state of health of the monitored person and they can be used together because one does not exclude the others. 
-
+Both these approaches are obviously very useful to detect the state of health of the monitored person and they can be used together because one does not exclude the other. 
 
 \section{Context-Modelling}
- There are several popular context modelling techniques, that are used in context-aware computing. The context models can be either dynamic or static and typically there are two different step that could be distinguished to represent a context according to a model.
+ There are several popular context modelling techniques, that are used in context-aware computing. The context models can be either dynamic or static and typically there are two different steps that could be distinguished to represent a context according to a model:
  \begin{itemize}
-     \item Context modelling process: his function is triggered when a new context need to be defined in terms of characteristics, attributes, relationships with previously specified context, quality-of context attributes and the queries for synchronous context requests.
-     \item Organize context according to the model: the result of the context modelling must be validated, then the new context information needs to be merged and added to the existing context information repository and finally make available the new context information when required.
+     \item Context modelling process: his function is triggered when a new context need to be defined in terms of characteristics, attributes, relationships with previously specified context, quality-of context attributes and the queries for synchronous context requests;
+     \item Organize context according to the model: the result of the context modelling must be validated, then the new context information needs to be merged and added to the existing context information repository and finally make available the new context information when required;
  \end{itemize}
  
  
@@ -196,7 +196,7 @@ Both these approaches are obviously very useful to detect the state of health of
  
  However the parameters and factors considered for the modelling context are very subjective. Indeed there is no standard to specify what type information needs to be considered in the context modelling.
  
- Chen at als \cite{chen2000survey} and Strang et als \cite{strang2004context} discussed the most popular context modelling techniques, each of them has its own strengths and weaknesses that are synthetically shown in the table below \cite{perera2014context}.
+ Chen at al. \cite{chen2000survey} and Strang et al. \cite{strang2004context} discussed the most popular context modelling techniques, each of them having its own strengths and weaknesses that are synthetically shown in the table below \cite{perera2014context}.
  
  	\begin{figure}[H]
 		\centering
@@ -204,28 +204,29 @@ Both these approaches are obviously very useful to detect the state of health of
 		\caption{Comparison of Context Modelling and representation Techniques \cite{perera2014context}}
 		\label{fig:populationProspect}
 	\end{figure}
- As it will be better discussed in the section \ref{ontology} the ontology, according to many surveys, is the preferred mechanism of managing and and modelling context, for all its advantages and despite its weaknesses \cite{perera2014context}.
+ As it will be better discussed in the section \ref{ontology} the ontology, according to many surveys, is the preferred mechanism of managing and  modelling context, for all its advantages and despite its weaknesses \cite{perera2014context}.
+ In fact it own several advantage, it separates domain knowledge from operational knowledge, shares a common understanding of the structure of information among people or software agents, and make domain assumptions explicit \cite{perera2014context}.
  
  
  \subsection{Reasoning}
- The context reasoning, also called inferencing, can be considered as a method to deduct new knowledge based on the available context, indeed it can also be described as a process to provide hight-level context deduction from a set of contexts \cite{perera2014context}.
+ The context reasoning, also called inferencing, can be considered as a method to deduct new knowledge based on the available context, indeed it can also be described as a process to provide high-level context deduction from a set of contexts \cite{perera2014context}.
  There are a lot of context reasoning decision models. Most of these models are not specific to context-reasoning but commonly employed in different fields such as machine learning or artificial intelligence.
- In \textit{"Context aware computing for the internet of things: A survey" Perera et als} \cite{perera2014context} are discussed the main solutions to context-reasoning, here briefly explained: 
+ In \textit{``Context aware computing for the internet of things: A survey" Perera et al.} \cite{perera2014context} are discussed the main solutions to context-reasoning, here briefly explained: 
  \begin{itemize}
      \item Supervised Learning: in this type of technique first we collect a training set examples. Then we label them according to the results we expect. Then we generate the expected results using the training data.
-     They are commonly used where the feature set is easily identifiable.
+     They are commonly used where the feature set is easily identifiable;
      
      \textit{Artificial neural network, Bayesian Networks, Case-based reasoning, Decision tree learning, Support vector machines}
-     \item Unsupervised Learning: they are used for situations where possible out comes are not known. This type of solution has the great advantage of not needing a training date.
+     \item Unsupervised Learning: they are used for situations where possible out comes are not known. This type of solution has the great advantage of not needing training data;
      
      \textit{Clustering, k-Nearest Neighbour}
-     \item Rule: applicable for situations where raw data elements need to be converted in to high level context information. Suitable to use to define events , because it needs for few computational resources and storage. Simple to define and easy to extend. 
-     \item Fuzzy Logic: applicable for situation where it is necessary convert low-level context in to more high-level context information. It is similar to probabilistic reasoning but confidence values represent degrees of membership rather than probability indeed in traditional logic theory, acceptable truth values are 0 or 1. In fuzzy logic partial truth values are acceptable \cite{perera2014context}. 
-     \item Ontology based: It is mainly supported by two common representations of semantic web languages: RDF and OWL. Furthermore, it is based on description logic, which is a family of logic based knowledge representations of formalisms and it is used in case where knowledge is critical and it allows complex reasoning and complex representation basis on the ontology structure.
+     \item Rule: applicable for situations where raw data elements need to be converted in to high level context information. Suitable to use to define events , because it needs for few computational resources and storage. Simple to define and easy to extend; 
+     \item Fuzzy Logic: applicable for situation where it is necessary convert low-level context in to more high-level context information. It is similar to probabilistic reasoning but confidence values represent degrees of membership rather than probability indeed in traditional logic theory, acceptable truth values are 0 or 1. In fuzzy logic partial truth values are acceptable \cite{perera2014context}; 
+     \item Ontology based: It is mainly supported by two common representations of semantic web languages: RDF and OWL. Furthermore, it is based on description logic, which is a family of logic based knowledge representations of formalisms and it is used in case where knowledge is critical and it allows complex reasoning and complex representation basis on the ontology structure;
     
      \textit{First-Order Predicate Logic}
      
-     \item Probabilistic logic: it allows decisions relying on probabilities attached to the facts related to the problem. It is commonly used where probabilities are known and combing evidence from different sources are essential. Indeed it can handle unseen situations and of uncertainty, combining the evidence.  
+     \item Probabilistic logic: it allows decisions relying on probabilities attached to the facts related to the problem. It is commonly used where probabilities are known and combing evidence from different sources are essential. Indeed it can handle unseen situations and of uncertainty, combining the evidence; 
      
      \textit{Dempster-Shafer, hidden Markov Models, naive Bayes}
  \end{itemize}
@@ -233,30 +234,30 @@ Both these approaches are obviously very useful to detect the state of health of
 
 \section{Ontology} \label{ontology}
 
-\textit{Studer et als} \cite{studer1998knowledge} defines the concept of ontology as follow: 
+According to \textit{Studer et al.} \cite{studer1998knowledge} an ontology is: 
 \begin{center}
-\textit{"An ontology is a formal, explicit specification of a shared conceptualisation. A conceptualisation refers to an abstract model of some phenomenon in the world by having identified the relevant concepts of that phenomenon. Explicit means that the type of concepts used, and the constraints on their use are explicitly defined. For example, in medical domains, the concepts are diseases and symptoms, the relations between them are causal and a constraint is that a disease cannot cause itself. Formal refers to the fact that the ontology should be machine readable, which excludes natural language. Shared reflects the notion that an ontology captures consensual knowledge, that is, it is not private to some individual, but accepted by a group.”}
+\textit{``A formal, explicit specification of a shared conceptualisation. A conceptualisation refers to an abstract model of some phenomenon in the world by having identified the relevant concepts of that phenomenon. Explicit means that the type of concepts used, and the constraints on their use are explicitly defined. For example, in medical domains, the concepts are diseases and symptoms, the relations between them are causal and a constraint is that a disease cannot cause itself. Formal refers to the fact that the ontology should be machine readable, which excludes natural language. Shared reflects the notion that an ontology captures consensual knowledge, that is, it is not private to some individual, but accepted by a group.”}
 \end{center}
 
 
-In the ontology based Modelling the context is organized into ontologies with different semantic technologies, indeed there are several popular standards (RDF, RDFS, OWL) and reasonoing capabilities usable depending on the requirement \cite{perera2014context}. 
-In literature is clear that the current recommendation, for semantic web ontology, is OWL 2 which is an extended version of OWL \cite{perera2014context}. The strength of OWL2 is that adds more vocabulary for describing properties and classes, ehich could be used to build complex concepts starting with simpler concepts.
-Furthermore, to get the real power of semantic technologies we need to choose one reasoning engine and, at this purpose, SWRL is the best  available solutions to add rules in OWL because is fully integrated into ontological reasoning. The dark side of this way of proceeding is that ontologies can becomes exceedingly complex and too much computationally expensive, slowing down the reason process when the amount of data becomes larger and structure becomes too complex.
+In the ontology based modelling the context is organized into ontologies with different semantic technologies, indeed there are several popular standards (RDF, RDFS, OWL) and reasoning capabilities usable depending on the requirement \cite{perera2014context}. 
+In literature is clear that the current recommendation, for semantic web ontology, is OWL 2 which is an extended version of OWL \cite{perera2014context}. The strength of OWL2 is that adds more vocabulary for describing properties and classes, which could be used to build complex concepts starting with simpler concepts.
+Furthermore, to get the real power of semantic technologies we need to choose one reasoning engine and, at this purpose, SWRL is the best available solutions to add rules in OWL because is fully integrated into ontological reasoning. The dark side of this way of proceeding is that ontologies can becomes exceedingly complex and too much computationally expensive, slowing down the reasoning process when the amount of data becomes larger and structure becomes too complex.
 
 In conclusion there are several reasons to develop and use ontologies in contrast to other modelling techniques. The most common reasons are:
 \begin{itemize}
-    \item share a common understanding of the structure of information among people or software agents.
-    \item analyse domain knowledge
-    \item separate domain knowledge from operational knowledge
-    \item high-level knowledge inferring
-    \item make domain assumptions explicit
+    \item share a common understanding of the structure of information among people or software agents;
+    \item analyse domain knowledge;
+    \item separate domain knowledge from operational knowledge;
+    \item high-level knowledge inferring;
+    \item make domain assumptions explicit;
 \end{itemize}
 
 
 \section{ADL}
 Our everyday activities tell us a lot about who we are and how ensure a certain level of independence \cite{buoncompagni2017towards}. For this reason at first it is very important to define them. As early as late 1950s, we began the study of psychological, social and biological aspects of aging, analyzing the correlation between human actions and cognitive and motor capabilities \cite{buoncompagni2017towards}. 
 
-The Index of Activities of Daily Living, described in \textit{"Multidisciplinary studies of illness in aged persons"} \cite{Multidisciplinary},  is the most used classification of functional status of elderly people and it is based on their ability to execute six different activities that are defined as ADLs:
+The Index of Activities of Daily Living, described in \textit{``Multidisciplinary studies of illness in aged persons"} \cite{Multidisciplinary},  is the most used classification of functional status of elderly people and it is based on their ability to execute six different activities that are defined as ADLs:
 %\begin{enumerate}[noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt]
 \begin{enumerate}
     \item \textit{bathing}
@@ -304,21 +305,95 @@ In this essay the term ADL will assume a more general meaning, representing any 
 
 
 \section{Human Activity Recognition}
-There are many papers in literature where are discussed the automatic recognition of ADL. There are often differences about adopted sensing equipment or in the choice of the type of sensors, but typically all the solution share a common paradigm: "\textit{distributed sensing, centralized reasoning}". The sensor information are distributed as raw data, with minimal or no processing, and made available to the reasoning system responsible for analyzing them to extract high level information, the ADL \cite{buoncompagni2017towards}.   
+There are many papers in literature where are discussed the automatic recognition of ADL. There are often differences about adopted sensing equipment or in the choice of the type of sensors, but typically all the solution share a common paradigm: ``\textit{distributed sensing, centralized reasoning}". The sensor information are distributed as raw data, with minimal or no processing, and made available to the reasoning system responsible for analyzing them to extract high level information, the ADL \cite{buoncompagni2017towards}.   
 
-A possible solution is to use binary sensors for their easy interpretation (eg: ON/OFF light switch) and their low cost. However, sensory information must be organized and analyzed in higher-level structures and this in literature, the most common and smart solution is doing it with \textit{ontologies}  already discussed in section \ref{ontology} \cite{buoncompagni2017towards}.
+% A possible solution is to use binary sensors for their easy interpretation (eg: ON/OFF light switch) and their low cost. However, sensory information must be organized and analyzed in higher-level structures and this in literature, the most common and smart solution is doing it with \textit{ontologies}  already discussed in section \ref{ontology} \cite{buoncompagni2017towards}.
 
-\section{Reliability recognition}
+\section{Recognition Reliability} \label{reliability}
 The reliability of the recognition is obviously fundamental for any system. Indeed we need to discriminate when a solution is consistent, when all the information is coherent or not with the specific activities detected, when there are some missing information or contradictory.
 As explained by \textit{Sentz et als} in \textit{Combination of evidence in Dempster-Shafer theory} \cite{sentz2002combination} to detailed information about the confidence of the recognition, the reasoning module extends a hierarchy of coarse ontologies implementing the Dempster - Shafer (DS). 
 
-However, there are also less extensive solutions, aimed at maximizing the accuracy of the recognition of a single type of ADL. Usually the solutions that follow this paradigm are based on a single or multiple homogeneous sensors that detect the quantities intrinsically correlated to a narrow range of activities. For example, analyzing the flow of water in the house's plumbing system alone can accurately detect when a person is bathing or washing.
+However, there are also less extensive solutions, aimed at maximizing the accuracy of the recognition of a single type of ADL. Usually the solutions that follow this paradigm are based on a single or multiple homogeneous sensors that detect the quantities intrinsically correlated to a narrow range of activities. For example, analyzing only the flow of water in the house's plumbing system can accurately detect when a person is bathing or washing.
 
  \chapter{State of the art}
  
  \section{Arianna+} \label{Arianna}     \todo{working progress}
- In this section, it is describe a knowledge-based approach for domain modeling (i.e., of context/activity) and reasoning (i.e., context/activity recognition), which is currently part of Arianna+ smart home framework.
+ In this section, it is describe a knowledge-based approach for domain modeling (i.e., of context/activity) and reasoning (i.e., context/activity recognition), which is currently part of Arianna+ smart home framework \cite{kareem2018arianna}.
+ The approach adopted and previously described are: 
+ \begin{itemize}
+     \item Ontology Web Language (OWL), based on description logics (DL), allows to describe a given domain by defining relevant concepts (in the terminological box or TBox), and by asserting properties of individuals that are instances of those concepts (in the assertional box or ABox).
+     Reasoners can then be used to derive facts, i.e., make implicit knowledge explicit, by reasoning mechanism \cite{donini1994deduction} based on \textit{subsumption} of concepts and \textit{instance checking};
+     \item Rules based on the Semantic Web Rule Language extends the OWL axioms as follow:
+    \begin{itemize}
+        \item It includes a high-level abstract syntax for Horn-like rules which are of the form of an implication between an antecedent (body) and consequent (head). The intended meaning can be read as: whenever the conditions specified in the antecedent hold, then the conditions specified in the consequent must also hold \cite{horrocks2004swrl};
+        
+        i.e \texttt{Person(?p)} $\wedge$ \texttt{hasAge(?p,?age)} $\wedge$ \texttt{swrlb:greaterThan(?age,17)} $\rightarrow$ \texttt{Adult(?p)}
+        
+        \item SWRL is a rule language, not a query language. However, to extract information from ontologies a query language to support querying of OWL ontologies are needed.
+        This is possible implementing  built-in library using the standard SWRL built-in mechanism; 
+        
+         i.e \texttt{Person(?p)} $\wedge$ \texttt{hasAge(?p,?age)} $\wedge$ \texttt{swrlb:greaterThan(?age,17)} $\rightarrow$ \\  $\rightarrow$ \texttt{query:select(?p, ?age)}
+        
+    \end{itemize}
+ \end{itemize}
  
+  OWL-DL reasoners do not perform temporal reasoning ,due to issues of language expressivity. Nevertheless it is possible to around the this limitation. Indeed an ontology can acquire the symbolic temporal concept by connecting to an upper ontology called OWLTime that provides us concepts related to Allen’s temporal algebra which allows DL reasoners to consider instances of time belonging to particular intervals \cite{kareem2018arianna}.
+  
+  In the literature there are some attempts \cite{scalmato2013describing,buoncompagni2017towards}, of ontology-based AR take temporal reasoning into account accumulating temporal instances. Hence, their search space grows exponentially \cite{salguero2018using} with respect to the number of axioms in the ontology, which is an issue for real-time and large-scale,  applications. 
+  For simplicity from now on in this work we will take basic temporal aspects for AR into account, without accumulating time instances within ontologies.
+
+ 
+ In a real-world environment, it is crucial that AR systems must carefully guarantee \textit{scalability} and \textit{robustness} requirements \cite{kareem2018arianna}.
+ \begin{itemize}
+     \item The scalability can be achieved when the system is:
+     \begin{itemize}
+         \item modular with respect the type of sensors, designing a system’s architecture that incorporates distributed sensors data;
+         \item modular with respect the activity models, designing them modularly as part of an ontology network, which is able to infer activities based on the occurrence of event;
+         \item able to manage computational resources and memory, designing the activity models such that they represent the context over time, and evaluate them with the most suitable behavior (e.g., with a scheduled frequency). Since they affect recognition performance in long-term applications 
+     \end{itemize}
+     \item The system’s robustness can be increased with redundancy of models with which we can assess the same activity;
+ \end{itemize}
+ 
+ 
+ \subsection{Activity Detection}
+ \subsubsection{Dynamic Ontology Networks}
+ In practice Arianna+ corresponds to a network of ontologies is tasked with a distributed reasoning process, each one dealing with different levels of detail in knowledge representation. 
+ A fundamental step to reach this goal is  the definition of an activity model, its components and the procedures to evaluate it. In particular, Arianna+ describes each data sample through a generation time instant (T) and a fluent statement defined as a combination of a Boolean state (e.g., top $\top$ and bottom $\bot$).
+ 
+ The recognition of an activity is represented as a new belief that acquires the Boolean $\top$ value by specifying the moment in which the execution of the activity is deduced.
+ 
+ In this way, more complex models can be built as chains of sub-models, since their outcome are statements, which can be embedded in more complex statements.
+ This makes the Arianna+ reasoning engine scalable and suitable to validate different ways to assert the same abstract concepts.
+ 
+Morover Arianna+ allows to use simpler concepts to recognize several more complex concepts sharing the beliefs  with other models. For example, once the activity has been recognized as \textit{''cabinet door opened"}, it can be used to recognize an activity such as \textit{''leaving an object"} or \textit{''taking an object"} and both can be used to conclude that the person is \textit{''cooking"}.
+
+ As already mentioned previously, Arianna grounds the above statement algebra formalization through a DL-based which allows for the specification of the \texttt{Statement} domain by restricting its instances to have exactly one property specifying its state and another specifying the generation time:
+ 
+ \begin{equation}
+     X \sqsubseteq_{=1} hasState(s_X) \sqcap_{=1} hasTime(t_X) \doteq Statement
+     \label{statment}
+ \end{equation}
+ 
+ The ontology network is defined as a graph $G$, wherein the set of nodes $N$ are ontologies (each with an independent DL reasoner) containing statements of the form \ref{statment} and they are used to describe a specific part of the context, while the set of directed edges E are communication channels used for sharing statements between the nodes.
+ 
+ Hence $G$ is of the form:
+ \begin{equation}
+     G = \left \{ N, E \right \}
+ \end{equation}
+ where, $N = n_1, n_2, ... , n_n$, such that each $node$ specializes in reasoning within a particular context, and $ E = e_{12},e_{13},...,e_{1n},e_{21},e_{23},...,e_{2n},...,e_{mn}$, such that the index of each $edge$ signifies the direction of flow of statements, e.g., in $e_{12}$ statements flow from $n_1$ to $n_2$. 
+ 
+ The system checks the statements in the network with a given frequency and, when an event is detected, specific external procedures are executed in order to: (i) move statements from one node to another via edges, and (ii) evaluate models for activity recognition. For instance, statements could be generated from distributed sensors (e.g., detecting that Adam is in the kitchen at 8:00 am), then the system aggregates this information with prior knowledge to detect events (e.g., Adam is in the kitchen in the morning). When such an event occurs, the model for detecting that Adam is having breakfast gets evaluated by checking statements and their temporal relations within the model.
+ Moreover, activity models can generate statements, e.g., indicating that Adam had (or did not have) breakfast at a certain time, and hence can trigger new events, which can further be used to describe the context and evaluate models via procedure executions. A formal algebra of statements, used for defining events that execute procedures based on the context, has been proposed in \cite{buoncompagni2017towards}.
+ 
+ \subsubsection{Dynamic Ontology Networks}
+ For the sake of description, we consider a simplified ontology network O as shown in Figure 1. In it there are 6 nodes; n1 is a location-based contextualizing model called Place Ontology P and n2,...,n6 are called activity models
+ 
+ 
+ 
+ 
+ As explained in Section \ref{reliability} of the first Chapter, it is important to perform consistency checks to describe the context as a semantic hierarchy to be applied to statements over time.
+ 
+ To do this Arianna+ uses the specifications of OWL API and Pellet to define semantic classes (indicated using capitalized names) and properties in their definitions (indicated with be/have characteristics), in order to allow the reasoner to classify individuals based on facts that have to hold true (in consistency terms) in the description of the environment. 
  
  
  \section{Companion Robot}  \label{companionRobot}
