@@ -210,7 +210,7 @@ Both these approaches are obviously very useful to detect the state of health of
  
  
  \subsection{Reasoning}
- Context based reasoning, can be considered as a method to deduct new knowledge based on the available context, indeed it can also be described as a process to provide high-level context deduction from a set of contexts \cite{perera2014context}.
+ Context based reasoning can be considered as a method to deduct new knowledge based on the available context, indeed it can also be described as a process to provide high-level context deduction from a set of contexts \cite{perera2014context}.
  There are a lot of context reasoning decision models. Most of these models are not specific to context-reasoning but commonly employed in different fields such as machine learning or artificial intelligence \cite{perera2014context}.
  A survey paper \cite{perera2014context} has discussed solutions for context-reasoning, here briefly explained: 
  \begin{itemize}
@@ -314,13 +314,13 @@ There are many papers in literature where are discussed the automatic recognitio
 The reliability of the recognition is obviously fundamental for any system. Indeed we need to discriminate when a solution is consistent, when all the information is coherent or not with the specific activities detected, when there are some missing information or contradictory.
 As explained by \textit{Sentz et als} in \textit{Combination of evidence in Dempster-Shafer theory} \cite{sentz2002combination} to detailed information about the confidence of the recognition, the reasoning module extends a hierarchy of coarse ontologies implementing the Dempster - Shafer (DS). 
 
-However, there are also less extensive solutions, aimed at maximizing the accuracy of the recognition of a single type of ADL. Usually the solutions that follow this paradigm are based on a single or multiple homogeneous sensors that detect the quantities intrinsically correlated to a narrow range of activities. For example, analyzing only the flow of water in the house's plumbing system can accurately detect when a person is bathing or washing.
+However, there are also less extensive solutions, aimed at maximizing the accuracy of the recognition of a single type of ADL. Usually the solutions that follow this paradigm are based on a single or multiple homogeneous sensors that detect the quantities intrinsically correlated to a narrow range of activities. For example, the  water flow analysis in the house's plumbing system can accurately distinguish when a person is bathing or washing.
 
  \chapter{State of the art}
  
  \section{Arianna+} \label{Arianna}    
  In this Section, it is describe a knowledge-based approach for domain modeling (i.e., of context/activity) and reasoning (i.e., context/activity recognition), which is currently part of Arianna+ smart home framework \cite{kareem2018arianna}. \\
- Arianna is widely described by two papers \textit{Towards a new paradigm for assistive technology at home} of \textit{Buoncompagni et al.} and \textit{Arianna+: Scalable Human Activity Recognition by Reasoning with a Network of Ontologies} of \textit{Yusha Kareem et al.} I therefore avoid citing them for a better reading. \\
+ Arianna is widely described by two papers \textit{Towards a new paradigm for assistive technology at home} of \textit{Buoncompagni et al.} \cite{buoncompagni2017towards} and \textit{Arianna+: Scalable Human Activity Recognition by Reasoning with a Network of Ontologies} of \textit{Yusha Kareem et al.} \cite{kareem2018arianna} I therefore avoid citing them for a better reading. \\
  The approaches chosen and adopted by Arianna+ can be summarized as follows:
  \begin{itemize}
      \item Ontology Web Language (OWL), based on description logics (DL), allows to describe a given domain by defining relevant concepts (in the terminological box or TBox), and by asserting properties of individuals that are instances of those concepts (in the assertional box or ABox).
@@ -419,7 +419,7 @@ Morover Arianna+ allows to use simpler concepts to recognize several more comple
      \item activity models $A_i$ constantly waiting for $P$ to generate particular events;
      \item all the nodes communicating through the edges $E = e_{12}, e_{13}, e_{14}, e_{15}, e_{16}$;
      \item the instructions flow between the various nodes through the edges;
-     \item the activities are activated when their independent reasoners check a particular event as shown in figure \ref{};
+     \item the activities are activated when their independent reasoners check a particular event as shown in figure \ref{fig:simplifiedOntologyNetwork};
      \item a procedure generates a new declaration to notify the recognition of the activity when a model is satisfied;\\
      e.g. \texttt{WatchingTV.{hasState(True), hasTime(19:28)}}
  \end{itemize}
@@ -491,92 +491,158 @@ Morover Arianna+ allows to use simpler concepts to recognize several more comple
  
  \section{Companion Robot}  \label{companionRobot}
  
- Per un anziano, il passaggio a una casa di riposo è spesso causato dalla perdità di una persona cara o da l'incapacità di badare a se stessi per il declino della propria salute o il mancato controllo su la propria vita. 
+ For an elderly person, the moving into to a retirement home is often caused by the loss of someone close or by the inability to look after themselves for the decline of his health or lack of control over his lives.
+ This means that the elderly at this stage of life loses certain aspects of his life that make him independent and satisfied.
  
- Ciò significa che l'anziano in questa fase della vita perde alcuni aspetti della propria vita che lo rendavano indipendente e soddisfatto. 
+ In fact, in nursing homes especially in the first phase of the stay, the elderly feel isolated, impotent and boredom with the consequent risk of depression and loneliness.
+ Unfortunately, even when they get used to staying in a nursing home, the feelings of loneliness and the isolation do not disappear because they have difficulty to establish new relationships \cite{assistiveRobots}.
  
- Infatti, nelle case di cura soprattuto nella prima fase del soggiorno, gli anziani tipicamente sentono si sentono isolati (feeling of halpness), impotenti e annoiati (boredom) con il conseguente rischio di depressione e solitudine. 
- Putroppo anche quando si abituano ad alloggiare nella casa di cura le sensazioni di solitudine e l'isolamento non spariscono perchè fanno difficoltà ad allacciare nuove relazioni.
- 
- Come supporto all'anziano oramai da tempo, molte case di cure incorporano visite di animali, perchè questi a soddifare i criteri voluti a promuovere una migliore qualità di vita:
+ Long time ago, to support elderly people, many care homes incorporate visits of animals, because they help fulfill criteria aimed at promoting better quality of life \cite{psicologicalEffects}:
  \begin{itemize}
-     \item incrementando le interazioni sociali
-     \item diminuendo la solitudine
-     \item contrastando la noia
-     \item favorendo il senso di scopo 
-     \item aiutando a ceare relazioni sociali
+     \item increasing social interactions;
+     \item decreasing loneliness;
+     \item countering boredom;
+     \item helping foster a sense of purpose;
+     \item helping to create social relationships;
  \end{itemize}
- inoltre quasi chiunque, indipendentemente dal danno fisico e cognitivo, può interagire con un animale.  \\
- Infatti le iterazioni con gli animali hanno 3 effetti: \\
+ Moreover almost anyone, independently of the physical and cognitive damage, can interact with an animal.  \\
+ In fact, interactions with animals have three effects \cite{psicologicalEffects}: 
  \begin{itemize}
-     \item effetto fisiologico (es. migliorramento dei segni vitali)
-     \item effetto psicologico (es. miglioramento dell'umore e depressione)
-     \item social effect (es. facilita la comunicazione)
+     \item physiological effect (e.g. improvement of vital signs)
+     \item psychological effect (e.g. improvement of mood and depression)
+     \item social effect (e.g. facilitates communication)
  \end{itemize}
 
- Il successo delle terapie con gli animali sono un dato di fatto, putroppo un animale ha bisogno di cure, ed il personlae di assistenza di una casa di cura si deve già occupare degli anziani quindi spesso non hanno ne voglia ne tempo di occuparsi anche di un animale. 
- Un robot di compagnia può portare agli stessi vantaggi di un vero animale al quale però non bisogna fornire nessuna cura o attenzione in quanto autonomi.
- Infatti i robot di compagnia non graffia o mordono, non possono indtrodurre parassiti e malattie infettive.
+ The success of treatment with animals is a fact, unfortunately an animal needs care, and the care staff of a nursing home must already take care of the elderly so they often do not have the desire or time to take care also of a animal.
+ A robot companion can have the same advantages as a real animal, but no care or attention must be given to it because it is autonomous.
+ In fact, the companion robots do not scratch or bite, can not bring parasites and infectious diseases.
  
- In uno studio in Giappone con 14 anziani con demenza lieve e moderata e con il companion robot Paro si è rilevato un un miglioramento del'umore e depressione e ridotti livelli di stresss:
- Lo staff di supporto ha definito il robot come un necessità in quanto fa ridere e rendere più attivi gli anziani rafforzando i legami sociali. 
- Putroppo come questo, li studi condotti non sono solidi perchè generalemten avvengono con piccoli campioni e per un breve periodo. 
+ In a study in Japan with 14 residents who suffered from mild to moderate dementia and with the robot companion Paro there was an improvement in mood and depression and reduced stress levels; 
+ The support staff defined the robot as a necessity because it made the elderly laugh and become more active by strengthening social ties.
+ Unfortunately like this, the studies conducted are not solid because they generally take place with small samples and for a short time \cite{psicologicalEffects}.
  
- Nella robotica assistiva si possono distinguere diverse categorie:
+ In assistive robotics we can distinguish different categories (fig: \ref{fig:layers}) \cite{assistiveRobots}:
  \begin{itemize}
-     \item robotica riabilitativa per aiutare i pazienti nella riablitazione per disabilità fisiche
+     \item rehabilitation robots to help patients rehabilitate physical disabilities
      \item  Asissitive social robot:
      \begin{itemize}
-         \item service type: non è percepito come un'attività sociale ma come attività di supporto. Esso infatti aiuta l'anziano a rimanere o riacquistare la propria indipendenza nelle funzioni di tutti i giorni e contemporanemaente permette il monitoraggio delle sue funzionalità. (es: arti artificiali)
-         \item companion type: corrisponde alla migliore soluzione per la salute e il benessere prsicologico degli utenti anziani fornendo loto compagnia. Per questo tipo di soluzione robotica è di fondamentale importanza l'espressività delle emozioni durante l'interazione con l'uomano.
+         \item service type: it is not perceived as a social activity but as a support activity. In fact, it helps the elderly to remain or regain their independence in the functions of every day and contemporaneously allows the monitoring of his functions. (e.g.: artificial limbs)
+         \item companion type: corresponds to the best solution for the health and psychological well-being of older users keeping company. For this type of robotic solution, the expressiveness of emotions during interaction with the human is crucial.
      \end{itemize}
  \end{itemize}
+ 
  \begin{figure}[h]
 	\centering
-	\includegraphics[width=13cm]{Thesis/data/TypeRobot.jpg}
-	\caption{test}
+	\includegraphics[width=14cm]{Thesis/data/TypeRobot.jpg}
+	\caption{"Categorization of assistive robots for elderly" \cite{assistiveRobots}}
 	\label{fig:layers}
  \end{figure}
  
- Nella domotica assistiva è però superfluo distinguere fra robot di tipo assistivo e di compagnia in quanto si può provae a cambinare entrambe le tipologie in un unica soluzione robotica. Infatti la tecnologia robotica in eldcare difficilmente si sviluppa solo per intrattenere.
- Un robot per esempio potrebbe essere sia ingrado di monitorare lo stato di dell'anziano che di tenergli compagnia aiutandolo nell'interazione con altre persone e con la tecnologia. 
+ In assistive domotics, however, it is superfluous to distinguish between assistive and company robots because it is possible to combine both types in a single robotic solution. In fact, the robotic technology in eldcare hardly develops just to entertain.
+ For example, a robot could be able to monitor the status of the elderly and keep him company helping to interact with other people and with technology.
  
- Infatti è importante notare che l'uso di un companion robot influenza positivamente l'accettazione della tecnologia da parte dell'anziano e questo è fondamentale importanza se si intende inserire l'anziano in una casa intelligente. 
+ It is noteworthy that the use of a robot companion positively influences the acceptance of technology by the elderly and this is crucial if you want to insert the elderly into a smart home.
  
- L'utente infatti vede il robot come un pezzo di tecnologia con una personalità più o meno facile da acettare. 
- Sono stati fatti numerosi studi per far in modo che l'utente soprattuto se avanti con l'età accetti la tecnologia. 
- Nei modelli di accettazione della tecnologia, il godimento è talvolta incorporato come "Godimento percettivo" (perceived Enjoyment) che è definito come:
- "misura in cui l'attività di utilizzo del sistema è percepita come godibile in se a prescidere dalle conseguenze sulla performance che possono essere anticipate".
- In generale l'accettazione di robot o agenti intelligenti avviene in termini:
- - in termini di utilità e facilità d'uso (accettazioine funzionae)
- - nell'accettazione del robot come conversetional partner con cui può stringere una relazione Robot-Human (accettazione sociale)
+ In fact, the user considers the robot as a piece of technology with more or less easy to accept personality.
+ Numerous studies have been done to ensure that the user is above all the elderly accepting the technology.
  
- La primo concetto di modello di accettazione risale al 1986 da "\todo{aggiungere autore}" il quele è ancora adesso il modello teorico fra i più utilizzati nella psicologia comportamentale. 
- Esso nella sua forma più elementare afferma che l'utilità percepità e facilità d'uso percepita determinano l'intenzione comportamentale di usare di usare un sistema.
-    
- Nel 2003, Venkatesh et al. ha pubblicato un inventario di tutti i modelli e fattori attuali e ha presentato un nuovo modello chiamato UTAUT. Esso copre i seguenti costrutti: 
+ In technology acceptance models, enjoyment is sometimes incorporated as "Perceptual Enjoyment" which is defined as: "the extent to which the use of the system is perceived as enjoyable in itself, regardless of the consequences on performance that may be anticipated".
+ 
+ In general, the acceptance of robots or intelligent agents takes place in terms:
  \begin{itemize}
-     \item aspettativa pdi prestazione
-     \item aspettativa di sforzo
-     \item attitudine all'uso della tecnologia
-     \item autoefficacia
-     \item ansia
+     \item in term of usefulness and ease of use (functional acceptance)
+     \item in accepting the robot as a conversational partner with which it can establish a Robot-Human relationship (social acceptance)
  \end{itemize}
  
- Come detto in precedenza si tratta l'accettazione del robot come in termini di utilità e di accettazione sociale. Ciò significa che un utente accettà il robot come partner conversazionale  trovando credibili le abilità sociali del robot, vedendo il robot come essere sociale autonomo. 
+ The first concept of a model of acceptance dates back to 1986 "Technology Acceptance Model for Empirically Testing New End-user Information Systems Theory and Results" which is still now the theoretical model among the most used in behavioral psychology \cite{davis1985technology,enjoymentModels}.
+ It states, in its most basic form, that ease of use and perceived usefulness determine the behavioral intention of using a system.
  
- Da questo possimao concludere che a prescendere dalla provenineza dell'interfaccia volcale, un parthner conversazionale è cruciale nell'accettazione tecnologica da parte dell'anziano. Questo argomento è più ampiamente descritto nello sezione \ref{\todo{fare riferimento alla sezione}}
- 
- In conlusione, riassumento i vantaggi dell'utilizzo di un companion robot in una casa di cura intelligente:
+ In 2003, Venkatesh et al. published an inventory of all current models and factors and presented a new model called UTAUT \cite{venkatesh2003user,enjoymentModels}. It covers the following constructs :
  \begin{itemize}
-     \item migliora la salute e il benessere psicologico dell'anziano 
-     \item non ha bisonogno di cure a differenza di un animale vero
-     \item può essere usato per monitorare l'anziano
-     \item può essere usato per monitorare le attività dell'anziano (nel nostro caso da parte di arianna+)
-     \item aiuta l'anziano ad accettare la tecnologia
+     \item performance expectation
+     \item effort expectation
+     \item aptitude for the use of technology
+     \item self-efficacy
+     \item anxiety
+ \end{itemize}
+ 
+ As previously discussed, when it comes to accepting robots, it is important not only to direct acceptance in terms of ease of use and utility of a system, but also of relational or social acceptance. This means that a user accepts the robot as a conversational partner finding credible social skills in the robot, considering the robot as an autonomous social being. 
+ 
+ From this we can conclude that regardless of the origin of the vocal interface, a conversational partner is crucial in the technological acceptance by the elderly. This topic is more widely described in the section \ref{speech}.
+ 
+ In conclusion, we can summarize the advantages of using a robot companion in a smart nursing home:
+ \begin{itemize}
+     \item improves the health and psychological well-being of the elderly
+     \item does not need treatment unlike a real animal
+     \item can be used to monitor the elderly activities (in our case by Arianna+)
+     \item helps the elderly to accept technology
  \end{itemize}
 
  \section{Based dialogue management system} \label{speech}
+ \subsection{Fields of study}
+ I sitemi tradizionni di telefonia e videoconferenze sono esempi di iterazioni computer-uomo incentrati sul terminale, nel quale l'utente focalizza la sua attenzione e sguardo, fisso sul terminale. Quindi decidendo di iniziare e poi di terminare una chiamata accendiamo o spegniamo la cominicazione incentrata sul terminale. Questo tipo di iterazione ha più o meno le stesse caratteristiche sociali di un incontro formale faccia a faccia. 
+ Allo stesso modo in una combinazione ambientale, come una persona potrebbe dialogare con un'altra persona in un'altra stanza, così il sistame di gestione del dialogo può interagire con l'ospitante. 
+ 
+ Lo studio dell'interazione computer-macchina in ambienti intellgiente è studiato da due branche di ricerca complementari: 
+ \begin{itemize}
+     \item L'interazione uomo-robot (HRI) può essere definita come "lo studio degli umani, dei robot e dei modi in cui si influenzano a vicenda". Come disciplina, l'HRI riguarda l'analisi, la progettazione, la modellazione, l'implementazione e la valutazione dei robot per uso umano.
+     L'HRI è fortemente correlato all'interazione uomo-computer (HCI) e all'interazione uomo-macchina (HMI). L'HRI, tuttavia, differisce da HCI e HMI perché riguarda sistemi (cioè robot) che hanno sistemi di controllo complessi e dinamici, che esibiscono autonomia e cognizione e che operano in ambienti mutevoli, reali.
+     
+     \item social intelligence which, in its widest definition, is a person's ability to ``...get along with people in general, social technique or ease in society, knowledge of social matters, susceptibility to stimuli from other members of a group, as well as insight into the temporary moods of underlying personality traits of strangers." [9]. \todo{aggiungere citazione}
+ \end{itemize}
+
+ entrambe giocano un ruolo importante in quanto entrambe studiano quanto e con che di namiche l'uomo si relaziona con sistema tecnologico, dal punto di vista di progettazione e ingegneristico in HRI e dal punto di vista psicologico nel social intelligence. 
+ 
+ \subsection{Approaches and advantages}
+ Sembrano esserci due opinioni prevalenti e probabilmente complementari su come gli umani interagiranno intellligenti: 
+ - attravefso una moltitudine di applicazioni informative specifiche per ogni attivà 
+ - attraverso un'interfaccia utente centralizzata che anticipa le esingeze degli uteni attraverso l'adattiblià dell'intelligenza. 
+ 
+ Nel dominio domestico, i sistemi di dialogo sono tenuti a svolgere il ruolo di intermediari fra i sistemi incorporati nella casa e le persone al loro interno. 
+ In generale le perosone in ambienti intelligenti vorrebbero essere monitorate il meno possibile tuttavia per gli anziani, un equilibrio tra vantaggio di tale monitoraggio (sensori di qualunque genere) e l'intrusione nella pprivacy. Tizio e Caio hanno infatti che il grado di accettazione della tecnologia intrusiva varia a seconda della gravità della patologia della persona anzian. Si riduce quindi tutto a un compromesso fra i vantaggi che il monitoraggio consegue e la violazione della privacy. 
+ Inoltre \todo{da cita} Tizio e Caio hanno dimostrato che dotare di intelligenza sociale un sistema di dialogo domestico fa in modo che il sistema venga percepito come socialmente intelligente portando ad un esperienza pi positiva agli utenti, i quali avranno ina maggiore accettazione non solo sel sistema di dialogo ma anche della tecnologia incorporata.
+ 
+ I vantaggi di una buona interfaccia sono chiari e ben documentati in letteratura. 
+ Per esempio in uno studio condotto da "" e "" sono state raccolte molte opinioni riguardanti degli anziani in una casa di cura verso un'interfaccia vocale. Infatti il 95\% degli utlizzatori avrebbe continuato ad usare tale sistema anche nel qual caso non funzionasse perfettamente e se quindi ogni tanto commettesse qualche errore. 
+ Tuttavia un'altro risultato importante emerso da questi studi è che indipendentemente dalla tecnologia utilizzata nessuna applicazione per case intelligenti avrà successo se questa non si adatta al singolo utilizzatore. 
+ infatti senza un'adeguata valutazione delle esigenze dell'assistito, la progettazione di un sistema di interazione, per l'integrazione di nuove tecnologie potrebbe rilevarsi vano. 
+ 
+ Quindi un sistema per l'interazione Uomo-Macchina e Macchina-Robot come sistema per la gestione di dialoghi deve consentire all'utente di interagire nel modo più naturale possibile. Affinchè ciò avvenga è necessario non colo che il sistame di dialogo intepreti correttamente il messaggio dell'utente ma che lo collochi in un determinato dominio o contesto. 
+ 
+ Nel caso di implementazione con Arianna+, questa deve essere conscia del constesto nel quale l'utente si trova tramite il detecting delle attività. Infatti se per esempio Arianna+ sa che la persona è in cucina che ci sono i fornelli accesi e sono le 20:15, ne potrebe concludere che sta cucinando. Quindi eventuali richieste o interventi della stessa arianna potranno vergere sul quel contesto. 
+ 
+ per ottenere un risultato del genere il sistema deve essere adattivo, ovvero deve essere in grado di adattarsi non solo al contesto ma alle diverse operatori con cui deve comunicare, regolando il proprio linguaggio e comportamento a seconda delle necessità. 
+ 
+ \subsection{Dialogue}
+ Per definizione il dialogo è un processo di comunicazione fra due o puù parti che richede la codivisione di informazioni di contesto. Lo stile come la forma del dialogo possono quindi variare a seconda degli interlocutori e del contesto in cui questo si trovano. Allo stesso modo in cui un dialogo fra un gruppo di scienziati in un laboratorio non è lo stesso di una maestra e la propria giovane alunna.
+ Tuttavia negli anni si sono potiti determinare molte proprietà del dialogo sono comuni a tutti. 
+ Tutte le comunicazioni verbali fra uomo e macchina, computer o robot che sia avvengono mediante un interfaccia che secondo Lansdale and Ormerod \todo{citare} è controllata da 5 fattori 
+ \begin{itemize}
+     \item \textit{linguistic competence} ovvero la capacità di costruire frasi intelleggibili e di comprendere il discorso dell'interlocuptore. Il dialogo fra l'uomo e la macchina richiede unfatti un vocabolario in grado di associre cocetti a parole o gruppi di queste (es: parole di comando) e sequenze di azioni (greammatica);
+     \item \textit{conversational competence} è un'abilità criciale per una qualsiasi conversazione di successo. Putroppo per la macchina meccanismi con l'inferenza sono molto più complicati da adottare rispetto che ad una perosona la quale li usa senza neanche accorgersene. Questi come altri meccanismi putroppo fanno procedere una dialogo fra persone con maggiore facilità rispetto invece a un dialogo uomo-macchina che va a rilento. Per questo l'interfaccia utente deve essere progettat in modo tale che gli utenti possano impartire intenzioni in modo inequivocaile e ricevere feedback;
+     \item \textit{nonverbal skills} corrspondono a tutti quelli aspetti della comunicazione che riguardano il linguaggio del corpo ossia quei gesti che aggiungono corenza al dialogo. Essi agiscono come adattamenti e spunti di controllo fornendo informazioni spesso ridondanti per una più semplice e immadiata comprensione del concetto che si vuole esprimere;
+     \item \textit{medium constraints} corrispondo a vincoli di comunicazione imposti all'utente per effettuare intraprendere un dialogo, influenzando quindi implitamente la natura del dialogo; 
+     \item \textit{task contraints} influenzano la struttura del dialogo. Il lessico come anche la struttura del linguaggio infatti varia a seconda del contesto in cui si ci trova per evitare equivoci e comunicare informazioni complesse. allo stesso modo di come cominicazione militare avrà un lessico e un grammatica completamente non è uguale a una comunicazine fra due persone al bar;
+ \end{itemize}
+ Fattore qui non citato ma altrettanto importante è l'esperienza. Infatti gli studi di esperti hanno dimostrato come la capacità di assimiliare e elabora le informazini dipende in gran parte dalla conoscenza che si ha dell'argomento. Questo perchè la precedente conoscenza consente di agli esperti di categorizzare e racchiudere più informazioni  in un solo concetto che invece può sembrare incomprensibile. 
+ Quando un dottore di impegna in un dialogo con un pazziente. Il dottore prende inizialmente il controlllo della conversazione facenodo tendere il dialogo ad una sequenza di domande e ripsoste. Invece quando entrambi gli interlocutori sono esperti dell'argomenti trattato, il controllo della conversazione è condiviso da ambe due le parti. 
+ Tale dicotomia si presenta allo stesso modo nelle interfacce con l'utente che o (1) garantiscono ad esperti un maggiore controllo che ai novizi (2) o assicurano che vengano eseguite procedure che l'utente non si ritiene capace di farlo. 
+ 
+ \subsection{Dialogue management}
+ A meno che l'interazione non sia elementare ovvero con una grammatica fissa e limitata, i sistemi di iterfaccia tra uomo e macchina richiedono una gestione del dialogo. 
+ La funzione più semplice della gestione di un dialogo è il tradurre le richieste dell'utente in modo che il computer possa comprenderlo. Un esempio è LUIS un servizio offerto da Microsoft basato su tecniche di machine learning in cui si insegna alla macchina a interpretare un input vocale in uno specifico dominio definendo a priori un determinato numero di Entità e Azioni. Per esempio con un input vocale input vocale "vai in cucina" potrebbe restiture come Entità=cucina e Action=moves, le quali informaizioni potrebbe essere facilmente interpretate dalla macchina in quanto parte del proprio dominio di conoscenza. 
+ Inoltre però il sistema deve essere in grado di gestire il cambio di ruolo che può avvenire in una qualsiasi fase del dialogo. I sistemi di gestione del dialogo possono consentire all'utente o al computer di prendere l'iniziativa a seconda della necessità. La difficoltà risiede infatti in dialoghi in l'iniziativa può essere presa in qualisiasi punto de dialogo[17].
+ 
+ Sono due i metodi più comuni per la gestione di un dialogo:
+ \begin{itemize}
+     \item graphs: il dialogo cosiste in una serie di nodi collegati fra loro e l'utente può scegliere quale "esplorare" (es: "per prenotazioni, premere 2"). In questo modo le possibilità di scelta sono limitate e quindi anche l'errore;
+     \item frames: database queries drive the dialogue ensuring less robustness compared to graphs but at the same time allowing greater flexibility for role switching;
+ \end{itemize}
+ 
+ \subsection{User Model}
+ Dovendo essere il dialogo studiato sulla base dell'interlocutore è importante definire un modello dell'interlocutore in modo che ci sia una ragionevole comprensione reciproca. Ad esempio le informazioni che veongo presentate (es: testo, grafica), raccolte (es: filtrate, classicate) possono essere adattate per l'utente. Un profilo o modelo del'utente contiente un set di informaizoni che lo descrivono. Queste informazioni sono quindi usbili dal gestore del dialogo poichè tipicamente un dialogo è fortemente dipendente dalle proprietà dell'interlocutore (es: livello di conoscenza o competenze, preferenze personali, reattività etc.)
+ Molte di queste propietà possono essere attribuite per esempio ad aspetti sociali in cui l'interlocutore vive. Se per esempio l'utente è giapponese avrà usanze diverse da un americano, avrà diverse abitudini e priorità diverse. Un sistema efficace è per la definizione di un modello è la generalizzazione ovvero chiedendo poce ma mirate informaizioni all'utente è possibile definitre un modello generalizzato e stereotipato che lo identifica con un sottogruppo proprietà che poi verranno modificate e aggiunte in fasi successive.
+ 
 
  %\chapter{Actual work}
   
