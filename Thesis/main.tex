@@ -557,7 +557,7 @@ Morover Arianna+ allows to use simpler concepts to recognize several more comple
  The first concept of a model of acceptance dates back to 1986 "Technology Acceptance Model for Empirically Testing New End-user Information Systems Theory and Results" which is still now the theoretical model among the most used in behavioral psychology \cite{davis1985technology,enjoymentModels}.
  It states, in its most basic form, that ease of use and perceived usefulness determine the behavioral intention of using a system.
  
- In 2003, Venkatesh et al. published an inventory of all current models and factors and presented a new model called UTAUT \cite{venkatesh2003user,enjoymentModels}. It covers the following constructs :
+ In 2003, \textit{Venkatesh et al.} published an inventory of all current models and factors and presented a new model called UTAUT \cite{venkatesh2003user,enjoymentModels}. It covers the following constructs :
  \begin{itemize}
      \item performance expectation
      \item effort expectation
@@ -580,69 +580,71 @@ Morover Arianna+ allows to use simpler concepts to recognize several more comple
 
  \section{Based dialogue management system} \label{speech}
  \subsection{Fields of study}
- I sitemi tradizionni di telefonia e videoconferenze sono esempi di iterazioni computer-uomo incentrati sul terminale, nel quale l'utente focalizza la sua attenzione e sguardo, fisso sul terminale. Quindi decidendo di iniziare e poi di terminare una chiamata accendiamo o spegniamo la cominicazione incentrata sul terminale. Questo tipo di iterazione ha più o meno le stesse caratteristiche sociali di un incontro formale faccia a faccia. 
- Allo stesso modo in una combinazione ambientale, come una persona potrebbe dialogare con un'altra persona in un'altra stanza, così il sistame di gestione del dialogo può interagire con l'ospitante. 
+ The traditional telephone and video conference systems are examples of computer-human iterations focused on the terminal, in which the user focuses his attention and gaze, fixed on the terminal. So deciding to start and then to end a call we turn on or off our attention turned to the terminal. This type of iteration has more or less the same social characteristics as a formal face-to-face meeting \cite{augusto2010ambient}.
+ Likewise in an environmental communication, as a person could dialogue with another person in another room, the same the dialogue management system can interact with the  user .
  
- Lo studio dell'interazione computer-macchina in ambienti intellgiente è studiato da due branche di ricerca complementari: 
+ The study of the interaction between human and technology in smart environments is studied by two complementary research sectors:
  \begin{itemize}
-     \item L'interazione uomo-robot (HRI) può essere definita come "lo studio degli umani, dei robot e dei modi in cui si influenzano a vicenda". Come disciplina, l'HRI riguarda l'analisi, la progettazione, la modellazione, l'implementazione e la valutazione dei robot per uso umano.
-     L'HRI è fortemente correlato all'interazione uomo-computer (HCI) e all'interazione uomo-macchina (HMI). L'HRI, tuttavia, differisce da HCI e HMI perché riguarda sistemi (cioè robot) che hanno sistemi di controllo complessi e dinamici, che esibiscono autonomia e cognizione e che operano in ambienti mutevoli, reali.
+    \item the human-robot interaction (HRI) can be defined as ``the study of humans, robots and the ways in which they influence each other". As a discipline, HRI concerns the analysis, design, modeling, implementation and evaluation of robots for human use.
+    HRI is strongly related to human-computer interaction (HCI) and human-machine interaction (HMI). HRI, however, differs from HCI and HMI because it concerns systems (i.e. robots) that have more complex and dynamic control systems.
      
-     \item social intelligence which, in its widest definition, is a person's ability to ``...get along with people in general, social technique or ease in society, knowledge of social matters, susceptibility to stimuli from other members of a group, as well as insight into the temporary moods of underlying personality traits of strangers." [9]. \todo{aggiungere citazione}
+    \item social intelligence which, in its widest definition, is a person's ability to ``...get along with people in general, social technique or ease in society, knowledge of social matters, susceptibility to stimuli from other members of a group, as well as insight into the temporary moods of underlying personality traits of strangers." \cite{vernon1933some}.
  \end{itemize}
 
- entrambe giocano un ruolo importante in quanto entrambe studiano quanto e con che di namiche l'uomo si relaziona con sistema tecnologico, dal punto di vista di progettazione e ingegneristico in HRI e dal punto di vista psicologico nel social intelligence. 
- 
+ both play an important role because they both study how much and with which dynamics man relates to the technological system, from the point of view of design and engineering in HRI and from the psychological point of view in social intelligence.
+
  \subsection{Approaches and advantages}
- Sembrano esserci due opinioni prevalenti e probabilmente complementari su come gli umani interagiranno intellligenti: 
- - attravefso una moltitudine di applicazioni informative specifiche per ogni attivà 
- - attraverso un'interfaccia utente centralizzata che anticipa le esingeze degli uteni attraverso l'adattiblià dell'intelligenza. 
- 
- Nel dominio domestico, i sistemi di dialogo sono tenuti a svolgere il ruolo di intermediari fra i sistemi incorporati nella casa e le persone al loro interno. 
- In generale le perosone in ambienti intelligenti vorrebbero essere monitorate il meno possibile tuttavia per gli anziani, un equilibrio tra vantaggio di tale monitoraggio (sensori di qualunque genere) e l'intrusione nella pprivacy. Tizio e Caio hanno infatti che il grado di accettazione della tecnologia intrusiva varia a seconda della gravità della patologia della persona anzian. Si riduce quindi tutto a un compromesso fra i vantaggi che il monitoraggio consegue e la violazione della privacy. 
- Inoltre \todo{da cita} Tizio e Caio hanno dimostrato che dotare di intelligenza sociale un sistema di dialogo domestico fa in modo che il sistema venga percepito come socialmente intelligente portando ad un esperienza pi positiva agli utenti, i quali avranno ina maggiore accettazione non solo sel sistema di dialogo ma anche della tecnologia incorporata.
- 
- I vantaggi di una buona interfaccia sono chiari e ben documentati in letteratura. 
- Per esempio in uno studio condotto da "" e "" sono state raccolte molte opinioni riguardanti degli anziani in una casa di cura verso un'interfaccia vocale. Infatti il 95\% degli utlizzatori avrebbe continuato ad usare tale sistema anche nel qual caso non funzionasse perfettamente e se quindi ogni tanto commettesse qualche errore. 
- Tuttavia un'altro risultato importante emerso da questi studi è che indipendentemente dalla tecnologia utilizzata nessuna applicazione per case intelligenti avrà successo se questa non si adatta al singolo utilizzatore. 
- infatti senza un'adeguata valutazione delle esigenze dell'assistito, la progettazione di un sistema di interazione, per l'integrazione di nuove tecnologie potrebbe rilevarsi vano. 
- 
- Quindi un sistema per l'interazione Uomo-Macchina e Macchina-Robot come sistema per la gestione di dialoghi deve consentire all'utente di interagire nel modo più naturale possibile. Affinchè ciò avvenga è necessario non colo che il sistame di dialogo intepreti correttamente il messaggio dell'utente ma che lo collochi in un determinato dominio o contesto. 
- 
- Nel caso di implementazione con Arianna+, questa deve essere conscia del constesto nel quale l'utente si trova tramite il detecting delle attività. Infatti se per esempio Arianna+ sa che la persona è in cucina che ci sono i fornelli accesi e sono le 20:15, ne potrebe concludere che sta cucinando. Quindi eventuali richieste o interventi della stessa arianna potranno vergere sul quel contesto. 
- 
- per ottenere un risultato del genere il sistema deve essere adattivo, ovvero deve essere in grado di adattarsi non solo al contesto ma alle diverse operatori con cui deve comunicare, regolando il proprio linguaggio e comportamento a seconda delle necessità. 
- 
- \subsection{Dialogue}
- Per definizione il dialogo è un processo di comunicazione fra due o puù parti che richede la codivisione di informazioni di contesto. Lo stile come la forma del dialogo possono quindi variare a seconda degli interlocutori e del contesto in cui questo si trovano. Allo stesso modo in cui un dialogo fra un gruppo di scienziati in un laboratorio non è lo stesso di una maestra e la propria giovane alunna.
- Tuttavia negli anni si sono potiti determinare molte proprietà del dialogo sono comuni a tutti. 
- Tutte le comunicazioni verbali fra uomo e macchina, computer o robot che sia avvengono mediante un interfaccia che secondo Lansdale and Ormerod \todo{citare} è controllata da 5 fattori 
+ There seem to be two views and probably complementary opinions about how humans interact:
  \begin{itemize}
-     \item \textit{linguistic competence} ovvero la capacità di costruire frasi intelleggibili e di comprendere il discorso dell'interlocuptore. Il dialogo fra l'uomo e la macchina richiede unfatti un vocabolario in grado di associre cocetti a parole o gruppi di queste (es: parole di comando) e sequenze di azioni (greammatica);
-     \item \textit{conversational competence} è un'abilità criciale per una qualsiasi conversazione di successo. Putroppo per la macchina meccanismi con l'inferenza sono molto più complicati da adottare rispetto che ad una perosona la quale li usa senza neanche accorgersene. Questi come altri meccanismi putroppo fanno procedere una dialogo fra persone con maggiore facilità rispetto invece a un dialogo uomo-macchina che va a rilento. Per questo l'interfaccia utente deve essere progettat in modo tale che gli utenti possano impartire intenzioni in modo inequivocaile e ricevere feedback;
-     \item \textit{nonverbal skills} corrspondono a tutti quelli aspetti della comunicazione che riguardano il linguaggio del corpo ossia quei gesti che aggiungono corenza al dialogo. Essi agiscono come adattamenti e spunti di controllo fornendo informazioni spesso ridondanti per una più semplice e immadiata comprensione del concetto che si vuole esprimere;
-     \item \textit{medium constraints} corrispondo a vincoli di comunicazione imposti all'utente per effettuare intraprendere un dialogo, influenzando quindi implitamente la natura del dialogo; 
-     \item \textit{task contraints} influenzano la struttura del dialogo. Il lessico come anche la struttura del linguaggio infatti varia a seconda del contesto in cui si ci trova per evitare equivoci e comunicare informazioni complesse. allo stesso modo di come cominicazione militare avrà un lessico e un grammatica completamente non è uguale a una comunicazine fra due persone al bar;
+     \item through a multitude of specific IT applications for each activity;
+     \item through a centralized user interface which anticipates the needs of users through the adaptability of intelligence;
  \end{itemize}
- Fattore qui non citato ma altrettanto importante è l'esperienza. Infatti gli studi di esperti hanno dimostrato come la capacità di assimiliare e elabora le informazini dipende in gran parte dalla conoscenza che si ha dell'argomento. Questo perchè la precedente conoscenza consente di agli esperti di categorizzare e racchiudere più informazioni  in un solo concetto che invece può sembrare incomprensibile. 
- Quando un dottore di impegna in un dialogo con un pazziente. Il dottore prende inizialmente il controlllo della conversazione facenodo tendere il dialogo ad una sequenza di domande e ripsoste. Invece quando entrambi gli interlocutori sono esperti dell'argomenti trattato, il controllo della conversazione è condiviso da ambe due le parti. 
- Tale dicotomia si presenta allo stesso modo nelle interfacce con l'utente che o (1) garantiscono ad esperti un maggiore controllo che ai novizi (2) o assicurano che vengano eseguite procedure che l'utente non si ritiene capace di farlo. 
+ In the home domain, dialogue systems shall be required to appear as intermediaries between the systems embedded in the home and the people within them.
+ In general, people in smart environments would like to be monitored as little as possible. Especially for the elderly it is necessary a trade-off between benefits and the intrusion into privacy. In fact, \textit{Portet et al.} have shown that the degree of acceptance of intrusive technology varies according to the severity of their disease \cite{portet2013design}. 
+ Furthermore \textit{Saini et al.} demonstrated that providing a  of domestic dialogue system with social intelligence and behaviours ensures that the system is perceived as socially intelligent, leading to a more positive experience for users, who will be encouraged not only to accept the dialogue system but also the embedded technology \cite{saini2005benefits}.
  
- \subsection{Dialogue management}
- A meno che l'interazione non sia elementare ovvero con una grammatica fissa e limitata, i sistemi di iterfaccia tra uomo e macchina richiedono una gestione del dialogo. 
- La funzione più semplice della gestione di un dialogo è il tradurre le richieste dell'utente in modo che il computer possa comprenderlo. Un esempio è LUIS un servizio offerto da Microsoft basato su tecniche di machine learning in cui si insegna alla macchina a interpretare un input vocale in uno specifico dominio definendo a priori un determinato numero di Entità e Azioni. Per esempio con un input vocale input vocale "vai in cucina" potrebbe restiture come Entità=cucina e Action=moves, le quali informaizioni potrebbe essere facilmente interpretate dalla macchina in quanto parte del proprio dominio di conoscenza. 
- Inoltre però il sistema deve essere in grado di gestire il cambio di ruolo che può avvenire in una qualsiasi fase del dialogo. I sistemi di gestione del dialogo possono consentire all'utente o al computer di prendere l'iniziativa a seconda della necessità. La difficoltà risiede infatti in dialoghi in l'iniziativa può essere presa in qualisiasi punto de dialogo[17].
+ The advantages of a good interface are clear and well documented in the literature.
+ For example, in a study conducted by \textit{Portet et al.} many opinions were collected concerning the appreciation of vocal interfaces in care homes for the elderly. In fact, 95\% of users would have continued to use this system even if it did not work perfectly and therefore occasionally made some mistakes \cite{portet2013design}.
+ However, another important result emerging from these studies is that regardless of the technology used, no smart home application will be successful if it does not fit the individual user.
+ In fact without an adequate assessment of the needs of the patient, the design of an interaction system, for the integration of new technologies, could be vain.
  
- Sono due i metodi più comuni per la gestione di un dialogo:
+ So a system for human-machine and machine-man interaction, as a dialogue management system, must allow the user to interact as natural as possible. For that to happen it is necessary that the dialogue system not only correctly interprets the user's message but also places it in a given domain or context.
+ 
+ In the case of implementation with Arianna+, it must be aware of the context in which the user located. In fact, if for example Arianna+ knows that the person is in the kitchen that there are the stove turned on and it is 8:15pm, it can conclude that it is cooking. Therefore any Arianna+ requests or intervention will be able to take account of context.
+
+ To obtain such a result, the system must be adaptive, that is, it must be able to adapt not only to the context but also to the different operators with which it must communicate, adjusting its language and behavior according to needs.
+
+ \subsection{Dialogue}
+ By definition, dialogue is a communication process between two or more parts which requires sharing of context information. The style and the form of the dialogue can therefore vary according to the interlocutors and the context in which they are. In the same way, as a dialogue between a group of scientists in a laboratory is not the same of dialogue between teacher and her young student.
+ However over the years it has been possible to determine many properties of dialogue are common to all.
+ All the verbal communications between man and machine, computer or robot are made through an interface that according to Lansdale and Ormerod \cite{mccourt1996understanding} is controlled by 5 factors:
+
  \begin{itemize}
-     \item graphs: il dialogo cosiste in una serie di nodi collegati fra loro e l'utente può scegliere quale "esplorare" (es: "per prenotazioni, premere 2"). In questo modo le possibilità di scelta sono limitate e quindi anche l'errore;
+     \item \textit{linguistic competence} that is the ability to construct intelligible sentences and to understand the interlocutor speech. The dialogue between man and machine requires a vocabulary able to associate concepts with words or groups of these (eg: command words) and sequences of actions (grammar);
+     \item \textit{conversational competence} is a crucial skill for any successful conversation. Unfortunately for the machine mechanisms like inference are much more complicated to adopt than to a person, who uses them without even noticing it. These, like other mechanisms, facilitate dialogue between people rather than a slower dialogue between man and machine. For this reason the user interface must be designed in such a way that users can unambiguously impart intentions and receive feedback;
+     \item \textit{nonverbal skills} correspond to all those aspects of communication that concern the language of the body, in other words those gestures that add coherence to the dialogue. They act as adaptations and cues of control, providing information often redundant for a simpler and immediate understanding of the concept that one wants to express;
+     \item \textit{medium constraints} correspond to the communication constraints imposed to the user to establish a dialogue, thereby implacably influencing the nature of the dialogue;
+     \item \textit{task constraints} influence the structure of dialogue. In fact the lexicon as well as the structure of the language  varies depending on the context in which we are, to avoid misunderstandings and communicate complex information. In the same way as a military communication  will have a lexicon and a grammar completely different from a discussion between two people at the bar;
+     
+ \end{itemize}
+ Factor not mentioned here but equally important is the experience. In fact, studies of experts have shown how the ability to assimilate and process information depends largely on the knowledge that you have of the topic. This is because the previous knowledge allows the experts to categorize and enclose more information in a single concept that instead may seem incomprehensible to a novice \cite{fong2001collaboration}.
+ When a doctor starts a dialogue with a patient. The doctor initially takes control of the conversation, leading the dialogue to a sequence of questions and replies. On the other hand, when both interlocutors are experts in a specific subject matter, control of the conversation is shared by both parties.
+ This dichotomy is presented in the same way in the interfaces with the user which or (1) guarantee to experts greater control than to novices (2) or ensure that the procedures, which the user is not able to do are, executed.
+
+ \subsection{Dialogue management}
+ Unless the interaction is elementary, with a fixed and limited grammar, the human-machine interface systems require dialogue management.
+ The simplest function of dialogue management is to translate user requests so that the computer can understand it. An example is LUIS a service offered by Microsoft based on machine learning techniques in which the machine is taught to interpret a voice input in a specific domain defining a priori a certain number of Entities and Actions. For example, with a voice input, "go to the kitchen" could return such as \texttt{"Entity"=kitchen} and \texttt{"Action"=move}, which information could be easily interpreted by the machine as part of its knowledge domain.
+ In addition, however, the system must be able to manage the change of role that can take place at any stage of the dialogue. Dialogue management systems can allow the user or computer to take the initiative depending on the case. The difficulty lies in fact in dialogues where the initiative can be taken in any phase of the dialogue \cite{churcher1997dialogue}.
+
+ There are two common methods for managing a dialogue:
+ \begin{itemize}
+     \item graphs: the dialogue consists of a series of nodes connected to each other where the user can choose which "to explore" (ex: "for reservations, press 2"). In this way the possibilities of choice are limited and therefore also the error;
      \item frames: database queries drive the dialogue ensuring less robustness compared to graphs but at the same time allowing greater flexibility for role switching;
  \end{itemize}
  
  \subsection{User Model}
- Dovendo essere il dialogo studiato sulla base dell'interlocutore è importante definire un modello dell'interlocutore in modo che ci sia una ragionevole comprensione reciproca. Ad esempio le informazioni che veongo presentate (es: testo, grafica), raccolte (es: filtrate, classicate) possono essere adattate per l'utente. Un profilo o modelo del'utente contiente un set di informaizoni che lo descrivono. Queste informazioni sono quindi usbili dal gestore del dialogo poichè tipicamente un dialogo è fortemente dipendente dalle proprietà dell'interlocutore (es: livello di conoscenza o competenze, preferenze personali, reattività etc.)
- Molte di queste propietà possono essere attribuite per esempio ad aspetti sociali in cui l'interlocutore vive. Se per esempio l'utente è giapponese avrà usanze diverse da un americano, avrà diverse abitudini e priorità diverse. Un sistema efficace è per la definizione di un modello è la generalizzazione ovvero chiedendo poce ma mirate informaizioni all'utente è possibile definitre un modello generalizzato e stereotipato che lo identifica con un sottogruppo proprietà che poi verranno modificate e aggiunte in fasi successive.
- 
+ Given that dialogue should be studied on the basis of the interlocutor, it is important to define a model of him so there is a reasonable mutual understanding. For example, the information presented (eg text, graphics), collections (eg: filtered, classic) can be adapted for the user. A profile or model of the user containing a set of information describing it. This information can therefore be used by the dialogue manager because typically a dialogue is strongly dependent on the properties of the interlocutor (eg: level of knowledge or skills, personal preferences, reactivity etc) \cite{fong2001collaboration}.
+ Many of these properties can be attributed, for example, to social aspects due to the place where they live. If for example the user is Japanese he will have different customs from an American, he will have different habits and different priorities. An efficient way to proceed is to define a model as generalization, asking few but targeted information to the user is possible to define a generalized and stereotyped model that identifies the person with a sub-group properties that may be modified and added in successive phases \cite{fong2001collaboration}.
 
  %\chapter{Actual work}
   
