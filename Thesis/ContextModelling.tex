@@ -1,0 +1,103 @@
+\newcommand\mc[1]{\multicolumn{1}{c}{#1}}
+\newcommand\Tstrut{\rule{0pt}{3ex}}       % "top" strut
+\newcommand\Bstrut{\rule[-2.6ex]{0pt}{0pt}}   % "bottom" strut
+\newcommand\TBstrut{\Tstrut\Bstrut}         % "top and bottom" strut
+\setlength{\tabcolsep}{3pt} % Default value: 6pt
+\renewcommand{\arraystretch}{2} % Default value: 1
+\newcommand{\mySpace}[1][]{\begin{minipage}[t]{\linewidth}#1\end{minipage}}
+\setlist[itemize]{leftmargin=*}
+
+
+\begin{center}
+\scriptsize
+\begin{longtable}{ @{}m{1.4cm}m{5cm}m{5cm}m{5cm}@{}  }
+\hline
+\mc{ \small Techniques}\TBstrut & \mc{ \small Pros} & \mc{\small Cons} & \mc{\small Applicability} \\
+\hline
+\hline
+%%Key-Value
+ Key-Value &  \begin{minipage}[t]{\linewidth}\begin{itemize}[nosep,after=\strut]
+  \item Simple
+  \item Flexible
+  \item Easy to manage when small size
+\end{itemize} \end{minipage} &  \begin{minipage}[t]{\linewidth}\begin{itemize}[nosep,after=\strut]
+  \item Strongly coupled with applications 
+  \item Not scalable
+  \item No structure or schema
+  \item Hard to retrieve information
+  \item No way to represent relationships 
+  \item No validation support
+  \item No standard processing tools are avaible
+\end{itemize}\end{minipage} & Can be used to model limited amount of data such as user preferences and application configurations. Mostly independent and non-related pieces of information. This is also suitable for limited data transferring and any other less complex temporary modelling requirements. \\ 
+
+%%Markup
+ \begin{minipage}[t]{\linewidth} \centering Markup Scheme Tagged Encoding (e.g. xml)\end{minipage}
+ &  \begin{minipage}[t]{\linewidth}\begin{itemize}[nosep,after=\strut]
+  \item Flexible
+  \item More structured
+  \item Validation possible through schemas
+  \item Processing tools are available
+\end{itemize} \end{minipage} &  \begin{minipage}[t]{\linewidth}\begin{itemize}[nosep,after=\strut]
+  \item Application depended as there are no standards for structures
+  \item Can be complex when many levels of information are involved
+  \item Moderately difficult to retrieve information
+\end{itemize}\end{minipage} &  Can be used as intermediate data organisation format as well as mode of data transfer over network. Can be used to decouple data structures used by two components in a system. \\ 
+
+%%Graphical
+  \begin{minipage}[t]{\linewidth} \centering Graphical (e.g. databases) \end{minipage}&  \begin{minipage}[t]{\linewidth} \begin{itemize}
+  \item Allows relationships modelling
+  \item Information retrieval is moderately
+easier
+  \item Different standards and implementations are available.
+  \item Validation possible through constraints
+\end{itemize} \end{minipage}& \begin{minipage}[t]{\linewidth} \begin{itemize}
+  \item Querying can be complex
+  \item Configuration may be required
+  \item Interoperability among different implementation is difficult
+  \item No standards but governed by design principles
+\end{itemize} \end{minipage}& 
+\begin{minipage}[t]{\linewidth} Can be used for long term and large volume of permanent data archival. Historic context can be store in databases. \end{minipage}\\
+
+%%Object Based
+  \begin{minipage}[t]{\linewidth} \centering Object Based\end{minipage}
+ & \begin{minipage}[t]{\linewidth}\begin{itemize}[nosep,after=\strut]
+  \item Allows relationships modelling
+  \item Can be well integrated using programming languages
+  \item Processing tools are available
+\end{itemize} \end{minipage} &  \begin{minipage}[t]{\linewidth}\begin{itemize}[nosep,after=\strut]
+  \item Hard to retrieve information
+  \item No standards but govern by design principles
+  \item Lack of validation
+\end{itemize}\end{minipage} & \begin{minipage}[t]{\linewidth} Can be used to represent context in programming code level. Allows context runtime manipulation. Very short term, temporary, and mostly stored in computer memory. Also support data transfer over network. \end{minipage}\\ 
+
+%%Logic Based
+  \begin{minipage}[t]{\linewidth} \centering Logic Based \end{minipage}&  \begin{minipage}[t]{\linewidth} \begin{itemize}
+  \item Allows to generate high-level context using low-level context
+  \item Simple to model and use easier
+  \item Support logical reasoning
+  \item Processing tools are available
+\end{itemize}\end{minipage} & \begin{minipage}[t]{\linewidth}\begin{itemize}
+  \item No standards
+  \item Lack of validation
+  \item Strongly coupled with applications
+\end{itemize} \end{minipage}& 
+\begin{minipage}[t]{\linewidth}Can be used to generate high-level context using low-level context (i.e. generate new knowledge), model events and actions (i.e. event detection), and define constrains and restrictions. \end{minipage}\\
+
+%%Ontology Based
+  \begin{minipage}[t]{\linewidth} \centering Ontology Based \vspace{0.1 in}\end{minipage}&  \begin{minipage}[t]{\linewidth} \begin{itemize}
+  \item Support semantic reasoning
+  \item Allows more expressive representation of context
+  \item Strong validation
+  \item Application independent and allows sharing
+  \item Strong support by standardization
+  \item Fairly sophisticated tools available
+\end{itemize} \vspace{0.1 in} \end{minipage} & \begin{minipage}[t]{\linewidth}\begin{itemize}
+  \item Representation can be complex
+  \item Information retrieval can be complex and resource intensive
+\end{itemize} \vspace{0.1 in}\end{minipage}& 
+\begin{minipage}[t]{\linewidth} Can be used to model domain knowledge and structure context based on the relationships defined by the ontology. Rather than storing data on ontologies, data can be stored in appropriate data sources (i.e. databases) while structure is provided by ontologies.\vspace{0.1 in} \end{minipage}\\ \hline
+
+\caption{Comparison of context modelling and representation techniques \cite{perera2014context}.}
+\label{fig:ContextModelling}
+\end{longtable}
+\end{center}

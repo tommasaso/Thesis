@@ -27,6 +27,8 @@
 \usepackage{multirow}
 \usepackage{longtable}
 \usepackage{subfiles}
+\usepackage{hyperref}
+
 
 
 \makeatletter
