@@ -189,13 +189,47 @@ The objective of this chapter is to discuss briefly the different aspects that c
 
 In recent times, there has been massive interest, in combining both the above approaches to detect complex activities based on sequences of simpler activities \cite{bruno2014public, noor2018ontology}. Furthermore for us, based on the scenarios that we wish to accomplish; our smart environment system should be able to detect vital signs, gestures and movements of the person, and also interact with them. Such a smart environment system is said to be context-aware, i.e., it knows the context of the person and interacts accordingly. A context-aware system needs to be modelled, and the process is known as \emph{context-modelling}, which we present further in the next section.
 
+\section{Human Activities Recognition systems}
+Human activity recognition (HAR), is a broad field of study concerned with identifying the specific task or action of a person based on sensor data.
+
+\emph{“Sensor-based activity recognition seeks the profound high-level knowledge about human activities from multitudes of low-level sensor readings” \cite{wang2018deep}}. 
+
+Especially in the healthcare applications the recognition of human activities become a task of high interest. For instance, patients with diabetes, obesity off heart disease are often required to follow a well defined exercise routine as part of their treatments, but also for the elderly whose habits are put at risk. In fact, at this stage of life we tend to lose those aspects of our daily life that define our independence. For this purpose in the literature we can find different activities that can help us to define the level of independence.
+
+\subsection{ADL}
+Our everyday activities tell us a lot about who we are and how we ensure a certain level of independence \cite{buoncompagni2017towards}. For this reason at first it is very important to define them. As early as late 1950s, we began the study of psychological, social and biological aspects of aging, analyzing the correlation between human actions and cognitive and motor capabilities \cite{buoncompagni2017towards}. 
+
+The Index of Activities of Daily Living, described in \textit{``Multidisciplinary studies of illness in aged persons"} \cite{Multidisciplinary},  is the most used classification of functional status of elderly people and it is based on their ability to execute six different activities that are defined as ADLs (see figure~\ref{fig:indexADL}), i.e., bathing, dressing, toileting, transferring, continence and feeding.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=17cm]{Thesis/data/IndexADL.png}
+	\caption{Index ADL}
+	\label{fig:indexADL}
+\end{figure}
+
+ In addition to these, other eight activities, that take the name of Scale of Instrumental ADL \cite{lawton1970assessment} (IADL), require sufficient capabilities of social skills and planning capabilities using and interacting with everyday objects \cite{buoncompagni2017towards}. 
+% It takes into account 8 parameters, each parameter in turn can have different degrees of autonomy, for each degree of autonomy it is possible to attract the value 1 or the value 0, for a maximum total of 8 points. This concept can be summarized as shown in the table \ref{tab:IADL}. 
+
+% At the end of the evaluation, by performing the sum of the values you can have a score that varies from 0 to 8.
+
+% The value 0 represents total dependence, while the opposite is total autonomy.
+
+% It is important to remember that if the non-exercise of an activity is not related to a loss of function but to the fact that that activity has never been performed even when the person was healthy and independent, that specific activity should not be considered to calculate the independence of a person.
+
+Nowadays, as explained in \cite{bruno2014public} the scale of IADL and the index of ADL are the \textit{de facto} standard indexes to evaluate person’s functional status \cite{buoncompagni2017towards}. 
+
+In our case, the term ADL will assume a more general meaning, representing any  considered daily activities, for example, cooking, watching TV etc.
+Recognition of ADL falls within the umbrella of human activity recognition (HAR), which aims to recognize the actions and goals of one or more user from a series of observations on the user's actions and the environmental conditions. To this end, there are many systems that attempt to recognize human activities. %We explore one such system called Arianna+.
+
+
 \section{Context Modelling and Reasoning}
 \subsection{Context Modelling}
 %  There are several popular context modelling techniques, that are used in context-aware computing. However the parameters and factors considered for context modelling are very subjective, as they depend on the application we are building. Chen at al. \cite{chen2000survey} and Strang et al. \cite{strang2004context} discussed the most popular context modelling techniques, each of them having their own strengths and weaknesses that are shown in the table~\ref{fig:populationProspect} below.
 
 The information coming from the sensorization must therefore be organized to represent a context. 
 It is necessary to define context information in terms of attributes, characteristics and relationships between different contexts and their evolution over time. The information thus defined compose a context model that must be validated by adding and merging information on the existing context.
-There are different techniques of modeling or representation of the context each of them with their own strengths and weaknesses. But the choice of the most suitable model is extremely subjective and related to the application. For this purpose Chen at al. \cite{chen2000survey} and Strang et al. \cite{strang2004context} discussed the most popular context modelling briefly described with the table  \ref{fig:ContextModelling}:
+There are different techniques of modeling or representation of the context each of them with their own strengths and weaknesses. But the choice of the most suitable model is extremely subjective and related to the application. For this purpose Chen at al. \cite{chen2000survey} and Strang et al. \cite{strang2004context} discussed the most popular context modelling techniques briefly described with the table  \ref{fig:ContextModelling}:
 \vspace{0.2 cm}
 \subfile{ContextModelling.tex}	
 
@@ -203,8 +237,8 @@ There are different techniques of modeling or representation of the context each
 
 \subsection{Expressivity}
 
-One of the most important features of a representative language or model is expressiveness. It is intuitively used to measure how easy it is for a programming language to implement complex ideas. A model of it is all the more expressive as it is so great the variety and the quantity of ideas that can be used to represent a concept
-But it is also important to underline that among the languages presented in the table \ref{fig:ContextModelling}, ontology is without any doubt the most expressive. Unfortunately, more a language is expressive, more the representation of context is complex and computationally expensive \cite{farmer2007chiron}.
+One of the most important features of a representative language, or model, is expressiveness. It is intuitively used to measure how easy it is for a programming language to implement complex ideas. A model of it is all the more expressive as it is so great the variety and the quantity of ideas that can be used to represent a concept.
+It is also important to underline that among the languages presented in the table \ref{fig:ContextModelling}, ontology is in all likelihood the most expressive. Unfortunately, more a language is expressive, more the representation of context is complex and computationally expensive \cite{farmer2007chiron}.
 
  \subsection{Context Reasoning}
  
@@ -230,11 +264,12 @@ But it is also important to underline that among the languages presented in the 
 It's necessary to emphasize that each of the different approaches listed before are closely related also with the chosen context model. In fact if for the context model the most important characteristic is the expressivity, for the reasoning process the most important is the explainability, which is the ability to explain or to present model's decisions in understandable terms to a human, as defined by Doshi-Velez and Kim \cite{doshi2017towards}.
 Even if we understand the underlying mathematical theories it is complicated and often impossible to get insight into the internal working of the models and to explain how and why a result was achieved.
 %To clarify the scope of this survey, we define the explainability of a reasoner as the ability to explain the reasoning of its predictions so that a human can understand. 
-Simple rule-based or decision tree approach for instance are more intuitively understandable. The same is not true for approaches as Neural Network or Support Vector Machine which boast high precision at the expense of explainability which can only reached with external models as BETA (Black Box Explanation through Transparent Approximation) \cite{lakkaraju2017interpretable} or LIME (Local Interpretable Model-Agnostic) \cite{ribeiro2016should}.  
+Simple rule-based or decision tree approach for instance are more intuitively understandable\ref{ming2017survey, breiman2017classification, quinlan1987simplifying}. The same is not true for approaches as Neural Network or Support Vector Machine \ref{kumar2012extracting, downs2001exact} which boast high accuracy at the expense of explainability which can only reached with external models as BETA (Black Box Explanation through Transparent Approximation) \cite{lakkaraju2017interpretable} or LIME (Local Interpretable Model-Agnostic) \cite{ribeiro2016should}.
 It is a very important property because it allows us to fully test and understand the processes that occur in our models.
 
-\section{Ontology} \label{ontology}
 
+\section{Ontology} \label{ontology}
+\todo{make the link to the previous section (explainability and expressivity)}
 According to \textit{Studer et al.} \cite{studer1998knowledge} an ontology is: 
 \begin{center}
 \textit{``A formal, explicit specification of a shared conceptualisation. A conceptualisation refers to an abstract model of some phenomenon in the world by having identified the relevant concepts of that phenomenon. Explicit means that the type of concepts used, and the constraints on their use are explicitly defined. For example, in medical domains, the concepts are diseases and symptoms, the relations between them are causal and a constraint is that a disease cannot cause itself. Formal refers to the fact that the ontology should be machine readable, which excludes natural language. Shared reflects the notion that an ontology captures consensual knowledge, that is, it is not private to some individual, but accepted by a group.”}
@@ -244,49 +279,21 @@ In the ontology based modelling the context is organized into ontologies with di
 In literature it is clear that the current recommendation, for semantic web ontology, is OWL 2 which is an extended version of OWL \cite{perera2014context}. The strength of OWL2 is that it adds more vocabulary for describing properties and classes, which could be used to build complex concepts starting with simpler concepts.
 Furthermore, to get the real power of semantic technologies we also use SWRL rules in OWL because they are fully integrated into ontological reasoning. The cons of this approach is that ontologies can becomes exceedingly complex and computationally expensive, slowing down the reasoning process when the amount of data becomes larger and structure becomes too complex.
 
-In conclusion there are several reasons to develop and use ontologies in contrast to other modelling techniques. The most common reasons are that, ontologies allow us to: share a common understanding of the structure of information among people or software agents, analyse domain knowledge, separate domain knowledge from operational knowledge, infer based on high-level knowledge (i.e., making implicit knowledge explicit).
-
-\section{ADL}
-Our everyday activities tell us a lot about who we are and how we ensure a certain level of independence \cite{buoncompagni2017towards}. For this reason at first it is very important to define them. As early as late 1950s, we began the study of psychological, social and biological aspects of aging, analyzing the correlation between human actions and cognitive and motor capabilities \cite{buoncompagni2017towards}. 
-
-The Index of Activities of Daily Living, described in \textit{``Multidisciplinary studies of illness in aged persons"} \cite{Multidisciplinary},  is the most used classification of functional status of elderly people and it is based on their ability to execute six different activities that are defined as ADLs (see figure~\ref{fig:indexADL}), i.e., bathing, dressing, toileting, transferring, continence and feeding.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=17cm]{Thesis/data/IndexADL.png}
-	\caption{Index ADL}
-	\label{fig:indexADL}
-\end{figure}
-
- These other eight activities, that take the name of Scale of Instrumental ADL \cite{lawton1970assessment} (IADL), require sufficient capabilities of social skills and planning capabilities using and interacting with everyday objects \cite{buoncompagni2017towards}. 
-It takes into account 8 parameters, each parameter in turn can have different degrees of autonomy, for each degree of autonomy it is possible to attract the value 1 or the value 0, for a maximum total of 8 points. This concept can be summarized as shown in the table \ref{tab:IADL}. 
-
-\subfile{IADL.tex}
-
-At the end of the evaluation, by performing the sum of the values you can have a score that varies from 0 to 8.
-
-The value 0 represents total dependence, while the opposite is total autonomy.
-
-It is important to remember that if the non-exercise of an activity is not related to a loss of function but to the fact that that activity has never been performed even when the person was healthy and independent, that specific activity should not be considered to calculate the independence of a person.
-
-Nowadays, as explained in \cite{bruno2014public} the scale of IADL and the index of ADL are the \textit{de facto} standard indexes to evaluate person’s functional status\cite{buoncompagni2017towards}. 
-
-In our case, the term ADL will assume a more general meaning, representing any  considered daily activities, for example, cooking, watching TV etc.
-Recognition of ADL falls within the umbrella of human activity recognition (HAR), which aims to recognize the actions and goals of one or more user from a series of observations on the user's actions and the environmental conditions. To this end, there are many systems that attempt to recognize human activities. We explore one such system called Arianna+.
+In conclusion there are several reasons to develop and use ontologies in contrast to other modelling techniques. The most common reasons are that, ontologies allow us to: share a common understanding of the structure of information among people or software agents, analyse domain knowledge, separate domain knowledge from operational knowledge, infer, on the basis of low-level knowledge, high-level knowledge (i.e., making implicit knowledge explicit).
 
 
 \section{Embodied and Non-Embodied Interface}
  The study of the interaction between human and technology is studied by two complementary research sectors:
  \begin{itemize}
-    \item the Human-Robot Interaction (HRI) which can be defined as ``the study of humans, robots and the ways in which they influence each other". As a discipline, HRI concerns the analysis, design, modeling, implementation and evaluation of robots for human use.
+    \item Human-Robot Interaction (HRI) which can be defined as ``the study of humans, robots and the ways in which they influence each other". As a discipline, HRI concerns the analysis, design, modeling, implementation and evaluation of robots for human use.
     HRI is strongly related to Human-Computer Interaction (HCI) and Human-Machine Interaction (HMI). HRI, however, differs from HCI and HMI because it concerns systems (i.e. robots) that have more complex and dynamic control systems.
      
     \item social intelligence which, in its widest definition, is a person's ability to ``\dots get along with people in general, social technique or ease in society, knowledge of social matters, susceptibility to stimuli from other members of a group, as well as insight into the temporary moods of underlying personality traits of strangers." \cite{vernon1933some}.
  \end{itemize}
 
- Both play an important role because they both study how much and with which dynamics man relates to the technological system, from the point of view of design and engineering and from the psychological point of view in social intelligence. 
+ Both play an important role because they study how much and with which dynamics people relate to the technological system, from the point of view of engineering design and from the psychological/social point of view. 
  
- So it is possible to distinguish two opposite approaches. On the one hand, the embodied interface where the social intelligence is managed by a physical piece of technology as a robot (HRI) \cite{lakkaraju2016interpretable, antle2009human, feil2005multi}, in the other hand in non-embodied interface where the social intelligence interface is not longer driven by a robot but by easier communication techniques as vocal interface or a computer (HCI) \cite{antle2009human, feil2005multi}.  
+ So it is possible to distinguish two opposite approaches. On the one hand, embodied interfaces where the social intelligence is managed by a physical piece of technology as a robot (HRI) \cite{lakkaraju2016interpretable, antle2009human, feil2005multi}, in the other hand non-embodied interfaces where the social intelligence interface is not longer driven by a robot but by easier communication techniques as vocal interface or a computer (HCI) \cite{antle2009human, feil2005multi}.  
 
 
 \subsection{Embodied interface}
@@ -296,7 +303,7 @@ Social robot means an autonomous or semi-autonomous robot capable of interacting
  
 It's possible to distinguish two different macro types of robots:
 \begin{itemize}
-\item Human-like: is a robot with its body shape built to resemble the human body like those in the picture \ref{fig:humanoid}. Like us, these robots have a head, a torso, arms, hands and often even legs. But also visual and auditory organs. Humanoid robotics aims to reproduce human beings, our physical abilities, our cognitive processes, our ability to respond to environmental stimuli and adapt to the environment in which we find ourselves. 
+\item Human-like: is a robot with its body shape built to resemble the human body like Pepper robot \cite{pepper} or Sota robot \cite{nttData} depicted in Fig.\ref{fig:humanoid}. Like us, these robots have a head, a torso, arms, hands and often even legs. But also visual and auditory system. Humanoid robotics aims to reproduce human beings, our physical abilities, our cognitive processes, our ability to respond to environmental stimuli and adapt to the environment in which we find ourselves. 
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{0.27\textwidth}
@@ -313,9 +320,10 @@ It's possible to distinguish two different macro types of robots:
 \label{fig:humanoid}	
 \end{figure}
 
-\item Not human-like: in general are any robots with a body shape not inspired to the human body. But in the specific case of social robots, often these are inspired by animals as Miro the like-pet robot developed by Consequential Robotics showed in fig \ref{fig:miro}. 
-In fact, one of the most common communications after that between human-human and that between human and humanoid robot is that with one's own pets in which even without verbal communication a non-verbal conversation can be established.
-Obviously, however, the robot under consideration does not necessarily have to be inspired by an animal, it is enough that it has social skills able to  autonomously establish a communication with the user. An example of a social robot neither humanoid nor like-pet is Vector developed by Anki and shown in the fig \ref{fig:vector}.
+\item Not human-like: in general are any robots with a body shape not inspired to the human body. But in the specific case of social robots, often these are inspired by animals as Miro \cite{miro} the like-pet robot developed by Consequential Robotics showed in fig \ref{fig:miro}. 
+%In fact, one of the most common communications after that between human-human and that between human and humanoid robot is that with one's own pets in which even without verbal communication a non-verbal conversation can be established.
+There is a large body of evidence that shows the importance of the interaction between humans and animals such as pets. Therefore it is possible to build domestic robots, like artificial emotional creatures, sensitive on the one hand to internal stimuli given by the design that are sensitive to external stimuli coming both from the physical environment and from human beings.   
+Obviously, the robot under consideration does not necessarily have to be inspired by an animal, it is enough that it has social skills able to  autonomously establish a communication with the user. An example of a social robot neither humanoid nor like-pet is Vector developed by Anki \cite{anki} and shown in the fig \ref{fig:vector}.
 \end{itemize}
 \begin{figure}[H]
 	\centering
@@ -334,7 +342,7 @@ Obviously, however, the robot under consideration does not necessarily have to b
 \end{figure}
 
 \subsection{Non-Embodied interface}
-When the interaction is no longer bound to a physical body or more generally, it is completely unrelated to any physical limitation, we speak of non-embodied interface. These interfaces are typically auditory (with vocal interfaces), visual (with screens), tactile or combinations of these. On the one hand these kind of approaches allow a simpler and cheaper interface on the other are less “complete" from the point of view of social skills.
+When the interaction is no longer bound to a physical body or more generally, it is completely unrelated to any physical limitation, we speak of non-embodied interface \cite{hoc2000human}. These interfaces are typically auditory (with vocal interfaces), visual (with screens), tactile or combinations of these. On the one hand these kind of approaches allow a simpler and cheaper interface on the other are less “complete" from the point of view of social skills.
 
 
 % \section{Human Activity Recognition}
@@ -366,7 +374,7 @@ When the interaction is no longer bound to a physical body or more generally, it
 
  % Matching between robot’s behaviour and it’s task = people acceptance - “Matching Robot Appearance and Behavior to Tasks to Improve Human-Robot Cooperation”
 
- % Effective human/robot interfaces which mimic how humans interact with one another could ultimately lead to robots be­ ing accepted - “Interactive Robot Task Training through Dialog and Demonstration”
+ % Effective human/robot interfaces which mimic how humans interact with one another could ultimately lead to robots be ing accepted - “Interactive Robot Task Training through Dialog and Demonstration”
  
  % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  % VOCAL 
@@ -374,7 +382,7 @@ When the interaction is no longer bound to a physical body or more generally, it
 
  % Voice interface = overall acceptance (for elderly) - “Design and evaluation of a smart home voice interface for the elderly: acceptability and objection aspects”
 
- % Non-embodied  vocal interface - “Improving Operational Support in Hospital Wards through Vocal Interfaces and Process-Awareness”
+ %Non-embodied  vocal interface - “Improving Operational Support in Hospital Wards through Vocal Interfaces and Process-Awareness”
  
 
  % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -427,7 +435,7 @@ When the interaction is no longer bound to a physical body or more generally, it
 %  \end{itemize}
  
 In a real-world environment, it is crucial that AR systems carefully guarantee \textit{scalability} and \textit{robustness} requirements \cite{kareem2018arianna}.
-The scalability can be achieved when the system is: (a) modular with respect to the type of sensors; (b) modular with respect to the activity models; (c) able to manage computational resources and memory. Arianna+ meets these constraints, by having a system's architecture that (a) incorporates distributed heterogeneous sensors; (b) has a network of ontologies in its reasoning layer, wherein each modular ontology is an activity model; (c) reasons based on particular ontologies, which are activated in the network based on context; rather than reasoning based on all the ontologies in all contexts.
+The scalability can be achieved when the system is: (a) modular with respect to the type of sensors; (b) modular with respect to the activity models; (c) able to manage computational resources and memory. \emph{Arianna+} meets these constraints, by having a system's architecture that (a) incorporates distributed heterogeneous sensors; (b) has a network of ontologies in its reasoning layer, wherein each modular ontology is an activity model; (c) reasons based on particular ontologies, which are activated in the network based on context; rather than reasoning based on all the ontologies in all contexts.
 Finally the robustness, is increased with redundancy of activity models, i.e., the same activity can be recognized with different activity models.
 
  \subsection{Activity Detection}
@@ -583,7 +591,7 @@ Morover Arianna+ allows the use of simpler concepts to recognize several more co
  We can distinguish different assistive robots categories (fig: \ref{fig:typeRobot}) \cite{assistiveRobots}:
  \begin{itemize}
      \item \textit{rehabilitation robots} that help patients rehabilitate physical disabilities
-     \item \textit{assisitive social robots} which are of two types. On one hand are \emph{service type} which are not perceived as a social but rather as a supportive. In fact, they help the elderly to remain with or regain their, independence in the functions of their every day and simultaneously allow the monitoring of their functions. (e.g.: artificial limbs). On the other hand, there are \emph{companion type} which aim to provide health and psychological well-being of elderly users by keeping them company. For this type of robotic solution, the expressiveness of emotions during the interaction with the human is crucial.
+     \item \textit{assisitive social robots} which are of two types. \emph{Service robots} which are not perceived as a social but rather as a supportive. In fact, they help the elderly to remain with or regain their independence in the functions of their every day and simultaneously allow the monitoring of their functions. (e.g.: artificial limbs). \emph{Companion robots} which aim to provide health and psychological well-being of elderly users by keeping them company. For this type of robotic solution, the expressiveness of emotions during the interaction with the human is crucial.
  \end{itemize}
  
  \begin{figure}[ht]
@@ -601,16 +609,16 @@ Morover Arianna+ allows the use of simpler concepts to recognize several more co
  In fact, the user considers the robot as a piece of technology with more or less easy to accept personality.
  Numerous studies have been done to ensure that above all, the elderly user is accepting of the technology \cite{heerink2008influence, enjoymentModels,assistiveRobots}.
  
- In technology acceptance models, enjoyment is sometimes incorporated as ``Perceptual Enjoyment" which is defined as: "the extent to which the use of the system is perceived as enjoyable in itself, regardless of the consequences on performance that may be anticipated" \cite{enjoymentModels, davis1992extrinsic}.
+ In technology acceptance models, enjoyment is sometimes incorporated as ``Perceptual Enjoyment" which is defined as: ``the extent to which the use of the system is perceived as enjoyable in itself, regardless of the consequences on performance that may be anticipated" \cite{enjoymentModels, davis1992extrinsic}.
  
  In general, the acceptance of robots or intelligent agents takes place in terms of \emph{functional acceptance}, i.e., usefulness and ease of use, and \emph{social acceptance} where a Robot-Human relationship is established, with a robot as  a conversational partner.
  
- The first concept of a model of acceptance dates back to 1986 "Technology Acceptance Model for Empirically Testing New End-user Information Systems Theory and Results" which is still now the theoretical model among the most used in behavioral psychology \cite{davis1985technology,enjoymentModels}.
+ The first concept of a model of acceptance dates back to 1986 ``Technology Acceptance Model for Empirically Testing New End-user Information Systems Theory and Results" which is still now the theoretical model among the most used in behavioral psychology \cite{davis1985technology,enjoymentModels}.
  It states, in its most basic form, that ease of use and perceived usefulness determine the behavioral intention of using a system.
  
  In 2003, \textit{Venkatesh et al.} published an inventory of all current models and factors and presented a new model called UTAUT \cite{venkatesh2003user,enjoymentModels} which covers the constructs of, performance expectation, effort expectation, aptitude for the use of technology, self-efficacy and anxiety.
  
- As previously discussed, when it comes to accepting robots, it is important not only to consider acceptance in terms of ease of use and utility of a system, but also of relational or social acceptance. This means that a user accepts the robot as a conversational partner finding credible social skills in the robot, considering the robot as an autonomous social being. 
+ As previously discussed, when it comes to accept robots, it is important not only to consider acceptance in terms of ease of use and utility of a system, but also of relational or social acceptance. This means that a user accepts the robot as a conversational partner finding credible social skills in the robot, considering the robot as an autonomous social being. 
  
  From this we can conclude that integration of a vocal interface along with a conversational partner, becomes crucial for the technological acceptance by the elderly. This topic is further elaborated in the section \ref{speech}.
  
@@ -621,12 +629,12 @@ Morover Arianna+ allows the use of simpler concepts to recognize several more co
 %      \item can be used to monitor the elderly activities (in our case by integration with Arianna+)
 %  \end{itemize} 
 %  We hypothesize that these advantages enable technology acceptance by the elderly.
-In conclusion, we summarize the advantages of using a companion robot in a smart nursing home, it (i) improves the health and psychological well-being of the elderly,(ii) does not need treatment unlike a real animal, (ii) can be used to monitor the elderly activities (in our case by integration with Arianna+) and (iv) can motivate the elderly to accept such technology.
+In conclusion, we summarize the advantages of using a companion robot in a smart nursing home, it (i) improves the health and psychological well-being of the elderly,(ii) does not need treatment unlike a real animal, (ii) can be used to monitor the elderly activities (in our case by the integration with Arianna+) and (iv) can motivate the elderly to accept such technology.
 
  \section{Dialogue management system} \label{speech}
  \subsection{Fields of study}
  The traditional telephone and video conference systems are examples of iterations focused on the terminal, in which the user focuses his attention and gaze, fixed on the terminal. So when deciding to start and then to end a call, we turn on or off our attention directed at the terminal. This type of iteration has more or less the same social characteristics as a formal face-to-face meeting \cite{augusto2010ambient}.
- Likewise in an environmental communication, as a person could dialogue with another person in another room, the same the dialogue management system can interact with the  user .
+ Likewise in an environmental communication, as a person could dialogue with another person in another room, the same the dialogue management system can interact with the  user.
  
  The study of the interaction between human and technology in smart environments is studied by two complementary research sectors:
  \begin{itemize}
@@ -676,7 +684,7 @@ There seem to be two views and probably complementary opinions about how humans 
      
  \end{itemize}
  A factor not mentioned here but equally important is the experience. In fact, studies of experts have shown how the ability to assimilate and process information depends largely on the knowledge that you have of the topic. This is because the previous knowledge allows the experts to categorize and enclose more information in a single concept that instead may seem incomprehensible to a novice \cite{fong2001collaboration}.
- When a doctor starts a dialogue with a patient. The doctor initially takes control of the conversation, leading the dialogue to a sequence of questions and replies. On the other hand, when both interlocutors are experts in a specific subject matter, control of the conversation is shared by both parties.
+ When a doctor starts a dialogue with a patient. The doctor initially takes control of the conversation, leading the dialogue to a sequence of questions and replies. On the other hand, when both interlocutors are experts in a specific subject matter, the control of the conversation is shared by both parties.
  This dichotomy is presented in the same way in the user's interface which (1) guarantee to experts greater control than to novices (2) or ensure that the procedures, which the user is not able to do, are executed.
 
  \subsection{Dialogue management}
